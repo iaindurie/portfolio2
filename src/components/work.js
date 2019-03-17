@@ -10,10 +10,13 @@ const Work = (props) => (
       display: 'grid',
       gridTemplateColumns: '1fr 1fr 1fr 1fr',
       gridTemplateRows: 'auto',
-      padding:'30px'
+      padding:'30px',
+      gridGap: rhythm(1)
     }}>
-    <WorkItem title="Avail" />
-    <WorkItem title="Ringtons" />
+    <WorkItem title="Avail" centered="true" />
+    <WorkItem title="EasyCare" />
+    <WorkItem title="Perfect Image" />
+    <WorkItem title="Ringtons" centered="true" />
   </div>
 )
 

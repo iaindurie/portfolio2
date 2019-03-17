@@ -6,7 +6,7 @@ import  { rhythm } from './../utils/typography'
 
 const WorkItem = (props) => (
   <article>
-      <h1>{props.title}</h1>
+      <h1 css={{fontWeight: '300'}}>{props.title}</h1>
   </article>
 )
 
