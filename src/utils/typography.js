@@ -4,7 +4,7 @@ const typography = new Typography({
   baseFontSize: '18px',
   baseLineHeight: 1.45,
     headerFontFamily: [
-      'Nunito Sans',
+      'Arimo',
       '-apple-system',
       'BlinkMacSystemFont',
       'Segoe UI',
@@ -17,7 +17,7 @@ const typography = new Typography({
       'Segoe UI Symbol',
     ],
     bodyFontFamily: [
-      'Nunito Sans',
+      'Arimo',
       '-apple-system',
       'BlinkMacSystemFont',
       'Segoe UI',
@@ -29,12 +29,12 @@ const typography = new Typography({
       'Segoe UI Emoji',
       'Segoe UI Symbol',
     ],
-    headerWeight: 700,
-    bodyWeight: 300,
+    headerWeight: 400,
+    bodyWeight: 400,
     googleFonts: [
       {
-        name: 'Nunito Sans',
-        styles: ['300','700'],
+        name: 'Arimo',
+        styles: ['400','700'],
       }
     ],
     overrideStyles: () => ({

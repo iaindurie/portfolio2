@@ -12,10 +12,10 @@ const Header = ({ siteTitle, jobDesc }) => (
         textAlign: 'left'
       }
     }}>
-      <h1 style={{ margin: '0 0 5px 0' }}>
+      {/* <h1 style={{ margin: '0 0 5px 0' }}>
         <span css={{ display: `block`, color: theme.colors.primary }}>{siteTitle}</span>
         <span css={{ display: `block`, color: theme.colors.text, fontSize: rhythm(1.05) }}>{jobDesc}</span>
-      </h1>
+      </h1> */}
       
   </header>
 )
