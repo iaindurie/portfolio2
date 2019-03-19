@@ -35,7 +35,10 @@ const WorkItem = (props) => (
 
       <Link to="ringtons" css={{
           textDecoration:'none',
+          display:'flex',
+          flexDirection:'column',
           color:theme.colors.text,
+          alignItems:'flex-start',
           ':hover h2' : {
             '&::after' : {
                 transform: 'scaleX(1.15)'
@@ -63,6 +66,7 @@ const WorkItem = (props) => (
           paddingBottom:'5px',
           position:'relative',
           fontWeight:'400',
+          display:'inline-block',
             '&::after' : {
                 position: 'absolute',
                 left:'0',
