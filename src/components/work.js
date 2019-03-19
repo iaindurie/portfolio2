@@ -13,8 +13,9 @@ export default () => (
         mainRingtons:  file(relativePath: { regex: "/main-ringtonsxhdpi/" }) {
           absolutePath
           childImageSharp {
-            fluid(maxWidth: 600) {
+            fluid(maxWidth:800, quality: 100) {
               ...GatsbyImageSharpFluid_withWebp
+              presentationWidth
               aspectRatio
             }
           }
@@ -22,18 +23,8 @@ export default () => (
       }
     `}
     render={data => (
-      // <div css={{
-      //   display: 'grid',
-      //   gridTemplateColumns: 'repeat(auto-fill, minmax(300px, 1fr))',
-      //   gridTemplateRows: 'auto',
-      //   padding:'30px',
-      //   gridGap: rhythm(1)
-      // }}>
 
-      <div css={{
-        display: 'flex',
-        flexWrap: 'wrap'
-      }}>
+      <div>
   
       {/* <WorkItem title="Avail" centered="true" />
   
