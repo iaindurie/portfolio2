@@ -6,16 +6,19 @@ import  { rhythm } from './../utils/typography'
 
 const Header = ({ siteTitle, jobDesc }) => (
   <header css={{
-      padding: rhythm(1),
+      padding: rhythm(1) + ' ' + rhythm(1.25),
       textAlign: 'center',
       '@media(min-width: 780px)' : {
         textAlign: 'left'
       }
     }}>
-      {/* <h1 style={{ margin: '0 0 5px 0' }}>
+    <Link to="/" css={{textDecoration:'none'}}>
+      <h1 style={{ margin: '0' }}>
         <span css={{ display: `block`, color: theme.colors.primary }}>{siteTitle}</span>
-        <span css={{ display: `block`, color: theme.colors.text, fontSize: rhythm(1.05) }}>{jobDesc}</span>
-      </h1> */}
+        <span css={{ fontWeight:'400',display: `block`, color: theme.colors.text, fontSize: rhythm(1.1) }}>{jobDesc}</span>
+      </h1>
+    </Link>
+      
       
   </header>
 )

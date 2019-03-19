@@ -8,7 +8,7 @@ import "./layout.css"
 export default ({ children }) => (
   <div>
     <Header />
-      <main>
+      <main css={{minHeight:'100vh'}}>
         {children}
       </main>
     <Footer />

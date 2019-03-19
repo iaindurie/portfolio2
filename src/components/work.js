@@ -26,17 +26,32 @@ export default () => (
 
       <div>
   
-      {/* <WorkItem title="Avail" centered="true" />
-  
-      <WorkItem title="EasyCare" />
-  
-      <WorkItem title="Perfect Image" /> */}
-  
-      <WorkItem
+        <WorkItem
         title="Ringtons"
         type="Mobile app"
         mainPic={data.mainRingtons}
         alt="Ringtons app screenshot"
+        critical="true" />
+
+        <WorkItem
+        title="Avail"
+        type="Mobile app"
+        mainPic={data.mainRingtons}
+        alt="Avail app screenshot"
+        critical="true" />
+
+        <WorkItem
+        title="EasyCare Respond"
+        type="Web app"
+        mainPic={data.mainRingtons}
+        alt="respond app screenshot"
+        critical="true" />
+
+        <WorkItem
+        title="Perfect Image / BI"
+        type="Website"
+        mainPic={data.mainRingtons}
+        alt="respond app screenshot"
         critical="true" />
     </div>
     )}

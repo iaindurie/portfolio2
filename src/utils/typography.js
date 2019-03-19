@@ -29,7 +29,7 @@ const typography = new Typography({
       'Segoe UI Emoji',
       'Segoe UI Symbol',
     ],
-    headerWeight: 400,
+    headerWeight: 700,
     bodyWeight: 400,
     googleFonts: [
       {
