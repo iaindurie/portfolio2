@@ -27,6 +27,7 @@
     "react": "^16.8.4",
     "react-dom": "^16.8.4",
     "react-intersection-observer": "^8.22.3",
+    "react-scrollbars-custom": "^4.0.0-alpha.2",
     "react-typography": "^0.16.19",
     "typography": "^0.16.19"
   },
