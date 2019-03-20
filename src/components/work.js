@@ -25,7 +25,7 @@ class Work extends React.Component {
   }
 
   render() {
-      const data = this.props.data;
+      const data = this.props.projects;
 
       return (
         <div>
