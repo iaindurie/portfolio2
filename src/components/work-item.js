@@ -11,7 +11,8 @@ const WorkItem = (props) => (
       height:'95vh',
       alignItems:'center',
       display:'flex',
-      justifyContent:'center'
+      justifyContent:'center',
+      marginBottom:rhythm(5)
     }}>
 
       <div css={{
@@ -65,7 +66,6 @@ const WorkItem = (props) => (
           marginBottom: rhythm(0.2),
           paddingBottom:'5px',
           position:'relative',
-          fontWeight:'400',
           display:'inline-block',
             '&::after' : {
                 position: 'absolute',

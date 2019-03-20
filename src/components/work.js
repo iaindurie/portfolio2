@@ -10,7 +10,17 @@ export default () => (
 <StaticQuery
     query={graphql`
       query workQuery {
-        mainRingtons:  file(relativePath: { regex: "/main-ringtonsxhdpi/" }) {
+        mainRingtons:  file(relativePath: { regex: "/ringtons1-xhdpi/" }) {
+          absolutePath
+          childImageSharp {
+            fluid(maxWidth:800, quality: 100) {
+              ...GatsbyImageSharpFluid_withWebp
+              presentationWidth
+              aspectRatio
+            }
+          }
+        }
+        mainAvail:  file(relativePath: { regex: "/avail1-xhdpi/" }) {
           absolutePath
           childImageSharp {
             fluid(maxWidth:800, quality: 100) {
@@ -36,7 +46,7 @@ export default () => (
         <WorkItem
         title="Avail"
         type="Mobile app"
-        mainPic={data.mainRingtons}
+        mainPic={data.mainAvail}
         alt="Avail app screenshot"
         critical="true" />
 
