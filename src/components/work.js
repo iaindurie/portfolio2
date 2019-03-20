@@ -51,7 +51,14 @@ export default () => (
         title="Perfect Image / BI"
         type="Website"
         mainPic={data.mainRingtons}
-        alt="respond app screenshot"
+        alt="Respond app screenshot"
+        critical="true" />
+
+        <WorkItem
+        title="Connect the Doc"
+        type="Web app"
+        mainPic={data.mainRingtons}
+        alt="Connect the Doc app screenshot"
         critical="true" />
     </div>
     )}

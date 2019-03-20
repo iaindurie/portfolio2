@@ -35,7 +35,7 @@ const Header = ({ siteTitle, jobDesc }) => (
         <span css={{ fontWeight:'400',display: `block`, color: theme.colors.text, fontSize: rhythm(1.1) }}>{jobDesc}</span>
       </h1>
     </Link>
-      
+    
       
   </header>
 )
