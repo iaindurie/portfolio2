@@ -52,7 +52,7 @@ const WorkItem = (props) => (
         }}>
 
         <h1 css={{
-          background:'white',
+          background:theme.colors.strip,
           display:'inline-block',
           color: theme.colors.primary,
           padding:rhythm(0.2) + ' ' + rhythm(0.5),
@@ -74,7 +74,7 @@ const WorkItem = (props) => (
                 bottom:'0',
                 right:'0',
                 content:`''`,
-                background:'white',
+                background:theme.colors.strip,
                 zIndex:'-1',
                 transform: 'scaleX(0)',
                 transition: 'all 0.35s 0.15s cubic-bezier(0.86, 0, 0.07, 1)',
