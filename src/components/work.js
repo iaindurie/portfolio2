@@ -1,41 +1,51 @@
 import PropTypes from "prop-types"
-import React from "react"
+import React, { Component } from "react"
 import theme from './../utils/variables'
 import { StaticQuery } from "gatsby"
 import WorkItem from './work-item'
 import  { rhythm } from './../utils/typography'
+import VisibilitySensor from "react-visibility-sensor";
+
+class Work extends React.Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      headerInView: true
+    };
+  }
 
 
-export default () => (
-<StaticQuery
-    query={graphql`
-      query workQuery {
-        mainRingtons:  file(relativePath: { regex: "/ringtons1-xhdpi/" }) {
-          absolutePath
-          childImageSharp {
-            fluid(maxWidth:800, quality: 100) {
-              ...GatsbyImageSharpFluid_withWebp
-              presentationWidth
-              aspectRatio
-            }
-          }
-        }
-        mainAvail:  file(relativePath: { regex: "/avail1-xhdpi/" }) {
-          absolutePath
-          childImageSharp {
-            fluid(maxWidth:800, quality: 100) {
-              ...GatsbyImageSharpFluid_withWebp
-              presentationWidth
-              aspectRatio
-            }
-          }
-        }
-      }
-    `}
-    render={data => (
+  onHideHeader = (isVisible) => {
+    if(isVisible) {
+        document.body.classList.add('logo-switch');
+    } else {
+        document.body.classList.remove('logo-switch');
+    }
+  }
 
-      <div>
+  render() {
+      const data = this.props.data;
+
+      return (
+        <div>
   
+        <WorkItem
+        title="Avail"
+        type="Mobile app"
+        mainPic={data.mainAvail}
+        alt="Avail app screenshot"
+        critical="true" />
+
+        <VisibilitySensor onChange={this.onHideHeader}>
+          <WorkItem
+          title="EasyCare Respond"
+          type="Web app"
+          mainPic={data.mainRingtons}
+          alt="respond app screenshot"
+          critical="true" />
+        </VisibilitySensor>
+
         <WorkItem
         title="Ringtons"
         type="Mobile app"
@@ -44,17 +54,10 @@ export default () => (
         critical="true" />
 
         <WorkItem
-        title="Avail"
-        type="Mobile app"
-        mainPic={data.mainAvail}
-        alt="Avail app screenshot"
-        critical="true" />
-
-        <WorkItem
-        title="EasyCare Respond"
-        type="Web app"
+        title="SK Chase"
+        type="Website theme"
         mainPic={data.mainRingtons}
-        alt="respond app screenshot"
+        alt="Ringtons app screenshot"
         critical="true" />
 
         <WorkItem
@@ -70,10 +73,11 @@ export default () => (
         mainPic={data.mainRingtons}
         alt="Connect the Doc app screenshot"
         critical="true" />
+
     </div>
-    )}
-  />
-)
+      )
+  }
+}
 
-
+export default Work
 

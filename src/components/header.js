@@ -4,9 +4,11 @@ import React from "react"
 import theme from './../utils/variables'
 import  { rhythm } from './../utils/typography'
 
+
 const Header = ({ siteTitle, jobDesc }) => (
   <header css={{
-    position:'fixed',
+      position:'fixed',
+      zIndex:'2',
       padding: rhythm(1) + ' ' + rhythm(1.25),
       textAlign: 'center',
       '@media(min-width: 780px)' : {
@@ -16,7 +18,6 @@ const Header = ({ siteTitle, jobDesc }) => (
     <Link to="/" css={{textDecoration:'none'}}>
       <h1 css={{
         margin: '0',
-        
       }}>
         <span css={{ display: `inline-block`,
         color: theme.colors.primary,
