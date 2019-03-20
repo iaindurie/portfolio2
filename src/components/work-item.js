@@ -34,7 +34,7 @@ const WorkItem = (props) => (
       </div>
 
 
-      <Link to="ringtons" css={{
+      <Link to={props.page} css={{
           textDecoration:'none',
           display:'flex',
           flexDirection:'column',

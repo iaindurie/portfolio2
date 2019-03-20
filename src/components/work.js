@@ -16,39 +16,42 @@ class Work extends React.Component {
   }
 
 
-  onHideHeader = (isVisible) => {
-    if(isVisible) {
-        document.body.classList.add('logo-switch');
-    } else {
-        document.body.classList.remove('logo-switch');
-    }
-  }
+
 
   render() {
       const data = this.props.projects;
+
+      function onChange (isVisible) {
+          if(isVisible === true) {
+            document.body.classList.add('visible');
+          } else {
+            document.body.classList.remove('visible')
+          }
+        }
 
       return (
         <div>
   
         <WorkItem
         title="Avail"
+        page="avail"
         type="Mobile app"
         mainPic={data.mainAvail}
         alt="Avail app screenshot"
         critical="true" />
 
-        <VisibilitySensor onChange={this.onHideHeader}>
-          <WorkItem
+        <WorkItem
           title="EasyCare Respond"
           type="Web app"
-          mainPic={data.mainRingtons}
+          page="easycare"
+          mainPic={data.mainEasyCare}
           alt="respond app screenshot"
           critical="true" />
-        </VisibilitySensor>
 
         <WorkItem
         title="Ringtons"
         type="Mobile app"
+        page="ringtons"
         mainPic={data.mainRingtons}
         alt="Ringtons app screenshot"
         critical="true" />
@@ -56,13 +59,21 @@ class Work extends React.Component {
         <WorkItem
         title="SK Chase"
         type="Website theme"
+        page="skchase"
         mainPic={data.mainRingtons}
         alt="Ringtons app screenshot"
         critical="true" />
 
+        <VisibilitySensor onChange={onChange}>
+          <span aria-hidden="true" css={{position:'absolute', top:'120px', left:'0'}}>&nbsp;</span>
+        </VisibilitySensor>
+
+
+
         <WorkItem
         title="Perfect Image / BI"
         type="Website"
+        page="perfect-image-bi"
         mainPic={data.mainRingtons}
         alt="Respond app screenshot"
         critical="true" />
@@ -70,6 +81,7 @@ class Work extends React.Component {
         <WorkItem
         title="Connect the Doc"
         type="Web app"
+        page="connect-the-doc"
         mainPic={data.mainRingtons}
         alt="Connect the Doc app screenshot"
         critical="true" />

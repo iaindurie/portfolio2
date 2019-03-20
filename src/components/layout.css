@@ -8,3 +8,9 @@ html {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
+  body:not(.visible) #logo {
+    transform: translateY(-150%);
+  }
+  #logo {
+    transition:all 0.35s 0.25s ease-in-out;
+  }

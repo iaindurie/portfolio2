@@ -15,9 +15,10 @@ const Header = ({ siteTitle, jobDesc }) => (
         textAlign: 'left'
       }
     }}>
-    <Link to="/" css={{textDecoration:'none'}}>
+    <Link id="logo" to="/" css={{textDecoration:'none',display:'inline-block'}}>
       <h1 css={{
         margin: '0',
+        
       }}>
         <span css={{ display: `inline-block`,
         color: theme.colors.primary,
