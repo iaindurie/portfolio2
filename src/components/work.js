@@ -37,53 +37,47 @@ class Work extends React.Component {
         page="avail"
         type="Mobile app"
         mainPic={data.mainAvail}
-        alt="Avail app screenshot"
-        critical="true" />
+        alt="Avail app screenshot" />
 
         <WorkItem
           title="EasyCare Respond"
           type="Web app"
           page="easycare"
           mainPic={data.mainEasyCare}
-          alt="respond app screenshot"
-          critical="true" />
+          alt="respond app screenshot" />
 
         <WorkItem
         title="Ringtons"
         type="Mobile app"
         page="ringtons"
         mainPic={data.mainRingtons}
-        alt="Ringtons app screenshot"
-        critical="true" />
+        alt="Ringtons app screenshot" />
 
         <WorkItem
         title="Bloom"
         type="Sign in experience"
         page="bloom"
         mainPic={data.mainBloom}
-        alt="Bloom sign in"
-        critical="true" />
+        alt="Bloom sign in" />
 
         <WorkItem
         title="SK Chase"
         type="Website theme"
         page="skchase"
         mainPic={data.mainSK}
-        alt="Ringtons app screenshot"
-        critical="true" />
-
-        <VisibilitySensor onChange={onChange}>
-          <span aria-hidden="true" css={{position:'absolute', top:'120px', left:'0'}}>&nbsp;</span>
-        </VisibilitySensor>
+        alt="Ringtons app screenshot" />
 
         <WorkItem
         title="Perfect Image / BI"
         type="Website"
         page="perfect-image-bi"
         mainPic={data.mainBI}
-        alt="Respond app screenshot"
-        critical="true" />
+        alt="Respond app screenshot" />
 
+
+        <VisibilitySensor onChange={onChange}>
+          <span aria-hidden="true" css={{position:'absolute', top:'120px', left:'0'}}>&nbsp;</span>
+        </VisibilitySensor>
     </div>
       )
   }
