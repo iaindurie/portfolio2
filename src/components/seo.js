@@ -1,4 +1,26 @@
 import React from "react"
-import PropTypes from "prop-types"
 import Helmet from "react-helmet"
-import { useStaticQuery, graphql } from "gatsby"
+
+
+const SEO = (props) => {
+    const content = props.content;
+    const keys = props.keys;
+
+    return(
+        
+
+        <Helmet meta={[
+            {
+                name: 'keywords',
+                content: keys
+            },
+            {
+                name: 'description',
+                content: content
+            }
+        ]} title={props.title} />
+
+    )
+}
+
+export default SEO

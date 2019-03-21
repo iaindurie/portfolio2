@@ -1,9 +1,11 @@
 import React from "react"
 import Layout from "../components/layout"
 import Work from "../components/work"
+import SEO from '../components/seo'
 
 export default ({data}) => (
     <Layout>
+        <SEO title="Iain Durie - UX Engineer" />
         <Work projects={data} />
     </Layout>
 )
@@ -41,5 +43,18 @@ export const homeQuery = graphql`
           }
         }
       }
+      mainSK:  file(relativePath: { regex: "/sk1-hdpi/" }) {
+        absolutePath
+        childImageSharp {
+          fluid(maxWidth:1200, quality: 100) {
+            ...GatsbyImageSharpFluid_withWebp
+            presentationWidth
+            aspectRatio
+          }
+        }
+      }
     }
 `
+
+
+

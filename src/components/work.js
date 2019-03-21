@@ -56,11 +56,20 @@ class Work extends React.Component {
         alt="Ringtons app screenshot"
         critical="true" />
 
+
+        <WorkItem
+        title="Bloom"
+        type="Sign in experience"
+        page="bloom"
+        mainPic={data.mainSK}
+        alt="Bloom sign in"
+        critical="true" />
+
         <WorkItem
         title="SK Chase"
         type="Website theme"
         page="skchase"
-        mainPic={data.mainRingtons}
+        mainPic={data.mainSK}
         alt="Ringtons app screenshot"
         critical="true" />
 

@@ -1,4 +1,7 @@
 module.exports = {
+    siteMetadata: {
+      siteUrl: 'http://www.iaindurie.com'
+    },
     plugins: [
       {
         resolve: `gatsby-source-filesystem`,
