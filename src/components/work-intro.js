@@ -9,10 +9,10 @@ import { style } from "glamor";
 
 const WorkTitle = (props) => (
   
-    <aside className={styles.workDetail}>
-        <h3>What I did</h3>
+    <header css={{width:'35%', maxWidth: '450px',marginBottom:rhythm(3)}}>
         {props.children}
-  </aside>
+        </header>
+
 )
 
 export default WorkTitle

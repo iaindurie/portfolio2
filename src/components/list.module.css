@@ -1,0 +1,15 @@
+.list {
+margin-left:0;
+}
+.list li {
+    display:inline-block;
+    margin:0;
+}
+.list li:not(:last-child)::after {
+    content:",\00a0";
+
+}
+
+.list li:nth-child(odd) {
+    color:#555555;
+}

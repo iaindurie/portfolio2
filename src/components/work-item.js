@@ -8,25 +8,37 @@ import  { rhythm } from './../utils/typography'
 const WorkItem = (props) => (
   
   <article css={{
-      height:'95vh',
-      alignItems:'center',
+      padding:'0 ' + rhythm(1),
       display:'flex',
-      justifyContent:'center',
-      marginBottom:rhythm(5)
+      flexDirection:'column',
+      marginBottom:rhythm(3),
+      '@media(min-width: 900px)' : {
+        alignItems:'center',
+        justifyContent:'center',
+        marginBottom:rhythm(5),
+        flexDirection:'row',
+        height:'95vh',
+      },
     }}>
 
       <div css={{
-        paddingLeft:rhythm(2),
-        paddingRight:rhythm(2),
-        maxWidth:props.mainPic.childImageSharp.fluid.presentationWidth,
-        flex:'1',
-        height:'100%',
-        '> .gatsby-image-wrapper':{
-          height:'100%'
+         '@media(max-width:899px)' : {
+          order:'2'
         },
-        '& img' : {
-          objectFit: 'contain !important'
-        }
+        '@media(min-width:900px)' : {
+          paddingLeft:rhythm(2),
+          paddingRight:rhythm(2),
+          maxWidth:props.mainPic.childImageSharp.fluid.presentationWidth,
+          flex:'1',
+          height:'100%',
+          '> .gatsby-image-wrapper':{
+            height:'100%'
+          },
+          '& img' : {
+            objectFit: 'contain !important'
+          }
+        },
+        
       }}>
         {props.mainPic &&
           <Image fluid={props.mainPic.childImageSharp.fluid} alt={props.alt} />
@@ -34,12 +46,27 @@ const WorkItem = (props) => (
       </div>
 
 
+
+
+      {/**/}
+
+
+
       <Link to={props.page} css={{
           textDecoration:'none',
+          // zIndex:'2',
+          // position: 'relative',
+          '@media(max-width:899px)' : {
+            order:'1',
+            marginBottom:rhythm(1)
+          },
           display:'flex',
           flexDirection:'column',
           color:theme.colors.text,
           alignItems:'flex-start',
+          '@media(min-width: 700px) and (max-width: 1600px)' : {
+            paddingRight:rhythm(2),
+          },
           ':hover h2' : {
             '&::after' : {
                 transform: 'scaleX(1.15)'

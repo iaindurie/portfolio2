@@ -1,12 +1,39 @@
 import React from "react"
 import Layout from "../components/layout"
-import WorkTitle from "../components/work-detail"
+import WorkTitle from "../components/work-title"
+import List from '../components/list'
+import Image from "gatsby-image"
+import WorkDetail from '../components/work-detail'
+import WorkIntro from '../components/work-intro'
+import BackLink from '../components/back-link'
+import { rhythm } from "../utils/typography";
 
-export default () => (
-    <Layout> 
-        <WorkTitle title="Avail" blurb="" />
-        <p>I designed and helped to build an app which allows hauliers and drivers to connect with each other - offering and accepting haulage jobs.</p>
+export default ({data}) => (
+    <Layout>
+        <BackLink />
+        
+        <article css={{padding:rhythm(5) + ' ' + rhythm(1.25)}}>
 
-        <p>The website is fully content-managed through Wordpress but is built and published as a static website.</p>
+        <WorkIntro>
+            <WorkTitle title="Avail" />
+            <p>I designed and helped to build an iOS/Android app which allows hauliers and
+                drivers to connect with each other - offering and accepting haulage jobs on the go.</p>
+            </WorkIntro>
+
+
+            <WorkDetail>
+                <List>
+                    <li>User research</li>
+                    <li>User flows</li>
+                    <li>Wireframes</li>
+                    <li>Mockups</li>
+                    <li>XAML coding</li>
+                </List>
+            </WorkDetail>
+            
+
+        </article>
     </Layout>
   )
+
+

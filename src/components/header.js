@@ -7,18 +7,21 @@ import  { rhythm } from './../utils/typography'
 
 const Header = ({ siteTitle, jobDesc }) => (
   <header css={{
-      position:'fixed',
-      zIndex:'2',
       padding: rhythm(1) + ' ' + rhythm(1.25),
       textAlign: 'center',
-      '@media(min-width: 780px)' : {
-        textAlign: 'left'
+      marginBottom:rhythm(2),
+      '@media(min-width: 900px)' : {
+        textAlign: 'left',
+        position:'fixed',
+        zIndex:'2',
       }
     }}>
     <Link id="logo" to="/" css={{textDecoration:'none',display:'inline-block'}}>
       <h1 css={{
         margin: '0',
-        
+        '@media(max-width:899px)' : {
+          fontSize:rhythm(1)
+        }
       }}>
         <span css={{ display: `inline-block`,
         color: theme.colors.primary,
@@ -34,7 +37,15 @@ const Header = ({ siteTitle, jobDesc }) => (
           zIndex:'-1'
         }
         }}>{siteTitle}</span>
-        <span css={{ fontWeight:'400',display: `block`, color: theme.colors.text, fontSize: rhythm(1.1) }}>{jobDesc}</span>
+        <span css={{ 
+          fontWeight:'400',
+          display: `block`,
+          color: theme.colors.text,
+          fontSize: rhythm(1.1),
+          '@media(max-width:899px)' : {
+            fontSize:rhythm(0.75)
+          }
+        }}>{jobDesc}</span>
       </h1>
     </Link>
     

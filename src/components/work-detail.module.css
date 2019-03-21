@@ -1,0 +1,6 @@
+.workDetail {
+    position:sticky;
+    top:50px;
+    width:25%;
+    max-width:350px;
+}
