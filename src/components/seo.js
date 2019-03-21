@@ -1,14 +1,11 @@
 import React from "react"
 import Helmet from "react-helmet"
 
-
 const SEO = (props) => {
     const content = props.content;
     const keys = props.keys;
 
     return(
-        
-
         <Helmet meta={[
             {
                 name: 'keywords',
@@ -19,7 +16,6 @@ const SEO = (props) => {
                 content: content
             }
         ]} title={props.title} />
-
     )
 }
 

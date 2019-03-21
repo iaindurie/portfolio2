@@ -53,6 +53,26 @@ export const homeQuery = graphql`
           }
         }
       }
+      mainBloom:  file(relativePath: { regex: "/bloom-hdpi/" }) {
+        absolutePath
+        childImageSharp {
+          fluid(maxWidth:1200, quality: 100) {
+            ...GatsbyImageSharpFluid_withWebp
+            presentationWidth
+            aspectRatio
+          }
+        }
+      }
+      mainBI:  file(relativePath: { regex: "/bi1-hdpi/" }) {
+        absolutePath
+        childImageSharp {
+          fluid(maxWidth:1200, quality: 100) {
+            ...GatsbyImageSharpFluid_withWebp
+            presentationWidth
+            aspectRatio
+          }
+        }
+      }
     }
 `
 

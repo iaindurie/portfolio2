@@ -56,12 +56,11 @@ class Work extends React.Component {
         alt="Ringtons app screenshot"
         critical="true" />
 
-
         <WorkItem
         title="Bloom"
         type="Sign in experience"
         page="bloom"
-        mainPic={data.mainSK}
+        mainPic={data.mainBloom}
         alt="Bloom sign in"
         critical="true" />
 
@@ -77,22 +76,12 @@ class Work extends React.Component {
           <span aria-hidden="true" css={{position:'absolute', top:'120px', left:'0'}}>&nbsp;</span>
         </VisibilitySensor>
 
-
-
         <WorkItem
         title="Perfect Image / BI"
         type="Website"
         page="perfect-image-bi"
-        mainPic={data.mainRingtons}
+        mainPic={data.mainBI}
         alt="Respond app screenshot"
-        critical="true" />
-
-        <WorkItem
-        title="Connect the Doc"
-        type="Web app"
-        page="connect-the-doc"
-        mainPic={data.mainRingtons}
-        alt="Connect the Doc app screenshot"
         critical="true" />
 
     </div>
