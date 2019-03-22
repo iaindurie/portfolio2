@@ -14,8 +14,10 @@ export default ({data}) => (
         <article css={{padding:rhythm(5) + ' ' + rhythm(1.25)}}>
 
         <WorkIntro>
-            <WorkTitle title="Bloom sign-in" />
-            <p>This is a sign-up experience for Bllo, a procurement platform.</p>
+            <WorkTitle title="Bloom sign-up" />
+            <p>This is a sign-up experience for Bloom, a procurement platform. The sign-up preocess needs to ensure
+                users stay engaged through the data capture process.
+            </p>
             </WorkIntro>
 
 
@@ -27,6 +29,9 @@ export default ({data}) => (
                     <li>Prototypes</li>
                 </List>
             </WorkDetail>
+
+
+    
             
 
         </article>
@@ -34,3 +39,63 @@ export default ({data}) => (
   )
 
 
+export const homeQuery = graphql`
+    query bloomQuery {
+      
+      bloom1:  file(relativePath: { regex: "/bloom-hdpi/" }) {
+        absolutePath
+        childImageSharp {
+          fluid(maxWidth:1200, quality: 100) {
+            ...GatsbyImageSharpFluid_withWebp
+            presentationWidth
+            aspectRatio
+          }
+        }
+      }
+
+      bloom2:  file(relativePath: { regex: "/bloom-hdpi/" }) {
+        absolutePath
+        childImageSharp {
+          fluid(maxWidth:1200, quality: 100) {
+            ...GatsbyImageSharpFluid_withWebp
+            presentationWidth
+            aspectRatio
+          }
+        }
+      }
+
+      bloom3:  file(relativePath: { regex: "/bloom-hdpi/" }) {
+        absolutePath
+        childImageSharp {
+          fluid(maxWidth:1200, quality: 100) {
+            ...GatsbyImageSharpFluid_withWebp
+            presentationWidth
+            aspectRatio
+          }
+        }
+      }
+
+      bloom4:  file(relativePath: { regex: "/bloom-hdpi/" }) {
+        absolutePath
+        childImageSharp {
+          fluid(maxWidth:1200, quality: 100) {
+            ...GatsbyImageSharpFluid_withWebp
+            presentationWidth
+            aspectRatio
+          }
+        }
+      }
+
+      bloom5:  file(relativePath: { regex: "/bloom-hdpi/" }) {
+        absolutePath
+        childImageSharp {
+          fluid(maxWidth:1200, quality: 100) {
+            ...GatsbyImageSharpFluid_withWebp
+            presentationWidth
+            aspectRatio
+          }
+        }
+      }
+
+    }
+`

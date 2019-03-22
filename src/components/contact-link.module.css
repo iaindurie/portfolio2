@@ -52,7 +52,7 @@
 
 .hands {
     position: absolute;
-    bottom: calc(100% - 20px);
+    bottom: calc(100%);
     left:50%;
     opacity:0;
     transform: translateX(-50%);
@@ -64,7 +64,22 @@
 
 .link {
     text-decoration:none;
-    position:relative
+    position:relative;
+
+}
+.link:hover::after {
+  transform:scaleY(2.75) translateY(8px);
+  transform-origin: bottom center;
+}
+.link::after {
+  content:"";
+  position:absolute;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0px;
+  z-index:-1;
+  transition:all 0.35s 0.15s cubic-bezier(0.215, 0.61, 0.355, 1);
 }
 
 .link:hover .hands {

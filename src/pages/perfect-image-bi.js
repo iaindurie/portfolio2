@@ -15,7 +15,7 @@ export default ({data}) => (
 
         <WorkIntro>
             <WorkTitle title="Perfect Image / BI" />
-            <p>A fast static website for Perfect Image's Business Intelligence division, which is managed through Wordpress as a headless CMS.</p>
+            <p>A fast static website for Perfect Image's Business Intelligence division. The site is managed through Wordpress as a headless CMS.</p>
             </WorkIntro>
 
             <WorkDetail>
