@@ -6,10 +6,12 @@ import List from '../components/list'
 import Image from "gatsby-image"
 import WorkDetail from '../components/work-detail'
 import WorkIntro from '../components/work-intro'
+import BackLink from '../components/back-link'
 import { rhythm } from "../utils/typography";
 
 export default ({data}) => (
     <Layout>
+         <BackLink />
         <article css={{padding:rhythm(5) + ' ' + rhythm(1.25)}}>
 
         <WorkIntro>

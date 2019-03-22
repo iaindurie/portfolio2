@@ -1,9 +1,10 @@
 .list {
+    list-style:none;
     margin-left:0;
 }
 .list li {
-    display:inline-block;
     margin:0;
+    display:inline-block;
 }
 .list li:not(:last-child)::after {
     content:"\00a0/\00a0";
@@ -14,4 +15,9 @@
 
 .list li:nth-child(odd) {
     color:#555555;
+
+}
+.skills {
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr
 }

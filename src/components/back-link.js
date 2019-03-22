@@ -11,13 +11,14 @@ const ContactLink = (props) => {
             width:'70px',
             lineHeight:'50px',
             position:'relative',
+            top:rhythm(1),
             marginLeft:rhythm(1.25),
             zIndex:'3',
             textDecoration:'none',
             display:'inline-block',
               '&::after' : {
                   position: 'absolute',
-                  left:'10px',
+                  left:'15px',
                   top:'0',
                   bottom:'0',
                   right:'0',
@@ -27,6 +28,12 @@ const ContactLink = (props) => {
                   transform: 'scaleX(0.75)',
                   transition: 'all 0.35s 0.15s cubic-bezier(0.86, 0, 0.07, 1)',
                   transformOrigin:'top left'
+              },
+              '&:hover::after' : {
+                  transform:'scaleX(1.35) translateX(-8px)'
+              },
+              '&:hover svg' : {
+                transform: 'translateX(-10px) translateY(-50%) scaleX(-1)',
               }
           }}>
   

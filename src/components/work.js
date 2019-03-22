@@ -55,7 +55,7 @@ class Work extends React.Component {
 
         <WorkItem
         title="Bloom"
-        type="Sign in experience"
+        type="Sign-up experience"
         page="bloom"
         mainPic={data.mainBloom}
         alt="Bloom sign in" />
