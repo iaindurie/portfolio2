@@ -8,7 +8,7 @@ const ContactLink = (props) => {
     return(
         <a href="mailto:iaindurie@gmail.com" className={styles.link} css={{
             fontSize:rhythm(1.125),
-            padding:'0 ' + rhythm(0.5),
+            padding:'7px ' + rhythm(0.5),
             color:theme.colors.primary,
             '&::after' : {
                 background:theme.colors.strip
