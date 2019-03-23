@@ -6,21 +6,59 @@ import Image from "gatsby-image"
 import WorkDetail from '../components/work-detail'
 import WorkIntro from '../components/work-intro'
 import BackLink from '../components/back-link'
+import WorkImages from '../components/work-images'
 import { rhythm } from "../utils/typography";
 
-export default ({data}) => (
+
+
+// {const }
+
+export default ({data, 
+    images = [
+            {
+              id: 'a',
+              headline: 'Answering a question',
+              img: data.easy1,
+              alt: ''
+            },
+            {
+              id: 'b',
+              headline: 'Showing questionnaire progress',
+              img: data.easy2,
+              alt: ''
+            },
+            {
+                id: 'c',
+                headline: 'Viewing assessments',
+                img: data.easy3,
+                alt: ''
+              },
+            {
+              id: 'd',
+              headline: 'Transitioning to another section',
+              img: data.easy3,
+              alt: ''
+            },
+        ]
+
+}) => (
+  
+
     <Layout>
         <BackLink />
         
-        <article css={{padding:rhythm(5) + ' ' + rhythm(1.25)}}>
+        <article css={{
+            padding:rhythm(5) + ' ' + rhythm(1.25),
+            display:'grid',
+            gridTemplateColumns:'minmax(25%, 350px) 1fr',
+            gridGap: rhythm(2)
+        }}>
 
-        <WorkIntro>
-            <WorkTitle title="Avail" />
-            <p>I designed and helped to build an iOS/Android app which allows hauliers and
+            <WorkIntro>
+                <WorkTitle title="Avail" />
+                <p>I designed and helped to build an iOS/Android app which allows hauliers and
                 drivers to connect with each other - offering and accepting haulage jobs on the go.</p>
-            </WorkIntro>
-
-            <WorkDetail>
+                <WorkDetail>
                 <List>
                     <li>User research</li>
                     <li>User flows</li>
@@ -29,14 +67,12 @@ export default ({data}) => (
                     <li>XAML coding</li>
                 </List>
             </WorkDetail>
+            </WorkIntro>
+
+
+            <WorkImages images={images} />
             
-            <div css={{maxWidth:'1200px'}}>
-                <Image fluid={data.easy1.childImageSharp.fluid} />
-
-                <Image fluid={data.easy2.childImageSharp.fluid} />
-
-                <Image fluid={data.easy3.childImageSharp.fluid} />
-            </div>
+            
         </article>
     </Layout>
   )

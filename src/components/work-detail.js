@@ -9,7 +9,7 @@ import { style } from "glamor";
 
 const WorkTitle = (props) => (
   
-    <aside className={styles.workDetail}>
+    <aside css={{gridColumnStart:'1'}} className={styles.workDetail}>
         <h3>What I did</h3>
         {props.children}
   </aside>
