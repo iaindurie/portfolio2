@@ -7,8 +7,8 @@ import styles from './skills.module.css'
 const Skills= (props) => {
     
     return(
-        <section css={{padding:rhythm(1.25), marginBottom:rhythm(3)}}>
-            <h2>What I do</h2>
+        <section css={{padding:rhythm(1.25), marginBottom:rhythm(3), marginLeft:'auto', marginRight:'auto',maxWidth:'1600px'}}>
+            <h2 css={{marginBottom:rhythm(2)}}>What I do</h2>
             <div className={styles.skills} css={{gridGap:rhythm(2)}}>
                 <div>
                     <h3 className={styles.skillTitle} css={{marginBottom:rhythm(0.5)}}>Design</h3>
