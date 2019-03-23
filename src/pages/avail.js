@@ -20,7 +20,6 @@ export default ({data}) => (
                 drivers to connect with each other - offering and accepting haulage jobs on the go.</p>
             </WorkIntro>
 
-
             <WorkDetail>
                 <List>
                     <li>User research</li>
@@ -31,9 +30,49 @@ export default ({data}) => (
                 </List>
             </WorkDetail>
             
+            <div css={{maxWidth:'1200px'}}>
+                <Image fluid={data.easy1.childImageSharp.fluid} />
 
+                <Image fluid={data.easy2.childImageSharp.fluid} />
+
+                <Image fluid={data.easy3.childImageSharp.fluid} />
+            </div>
         </article>
     </Layout>
   )
 
 
+export const homeQuery = graphql`
+    query availQuery {
+      easy1:  file(relativePath: { regex: "/easycare1-xhdpi/" }) {
+        absolutePath
+        childImageSharp {
+          fluid(maxWidth:1200, quality: 100) {
+            ...GatsbyImageSharpFluid_withWebp
+            presentationWidth
+            aspectRatio
+          }
+        }
+      }
+      easy2:  file(relativePath: { regex: "/easycare-progress/" }) {
+        absolutePath
+        childImageSharp {
+          fluid(maxWidth:1200, quality: 100) {
+            ...GatsbyImageSharpFluid_withWebp
+            presentationWidth
+            aspectRatio
+          }
+        }
+      }
+      easy3:  file(relativePath: { regex: "/easycare-assessments/" }) {
+        absolutePath
+        childImageSharp {
+          fluid(maxWidth:1200, quality: 100) {
+            ...GatsbyImageSharpFluid_withWebp
+            presentationWidth
+            aspectRatio
+          }
+        }
+      }
+    }
+`

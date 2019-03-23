@@ -9,14 +9,16 @@ import WorkIntro from '../components/work-intro'
 import BackLink from '../components/back-link'
 import { rhythm } from "../utils/typography";
 
+
 export default ({data}) => (
     <Layout>
          <BackLink />
+
         <article css={{padding:rhythm(5) + ' ' + rhythm(1.25)}}>
 
         <WorkIntro>
-            <WorkTitle title="EasyCare Respond" />
-            <p>I designed and helped to build a multi-section medical questionnaire, which enables users
+            <WorkTitle title="EasyCare - Respond" />
+            <p>I designed and built the front-end of a multi-section medical questionnaire, which enables users
                 to refer patients for any necessary medical help they may need.</p>
             </WorkIntro>
 
@@ -29,7 +31,7 @@ export default ({data}) => (
                     <li>Prototypes</li>
                     <li>Interaction Design</li>
                     <li>HTML / CSS / JS</li>
-                    
+                    <li>Performance auditing</li>
                 </List>
             </WorkDetail>
             
