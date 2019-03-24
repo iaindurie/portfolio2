@@ -7,7 +7,7 @@ import  { rhythm } from './../utils/typography'
 
 const WorkTitle = (props) => (
   
-<h1>{props.title}</h1>
+<h1 css={{fontSize:rhythm(0.9)}}>{props.title}</h1>
 )
 
 export default WorkTitle

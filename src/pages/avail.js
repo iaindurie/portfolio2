@@ -2,7 +2,6 @@ import React from "react"
 import Layout from "../components/layout"
 import WorkTitle from "../components/work-title"
 import List from '../components/list'
-import Image from "gatsby-image"
 import WorkDetail from '../components/work-detail'
 import WorkIntro from '../components/work-intro'
 import BackLink from '../components/back-link'
@@ -10,37 +9,33 @@ import WorkImages from '../components/work-images'
 import { rhythm } from "../utils/typography";
 
 
-
-// {const }
-
 export default ({data, 
     images = [
-            {
-              id: 'a',
-              headline: 'Answering a question',
-              img: data.easy1,
-              alt: ''
+        {
+            id: 'a',
+            headline: "Viewing a list of a driver's available jobs",
+            img: data.avail1,
+            alt: ''
+        },
+        {
+            id: 'b',
+            headline: 'Rejecting a job by dragging left',
+            img: data.avail2,
+            alt: ''
+        },
+        {
+            id: 'c',
+            headline: "Viewing a driver's schedule",
+            img: data.avail3,
+            alt: ''
             },
-            {
-              id: 'b',
-              headline: 'Showing questionnaire progress',
-              img: data.easy2,
-              alt: ''
-            },
-            {
-                id: 'c',
-                headline: 'Viewing assessments',
-                img: data.easy3,
-                alt: ''
-              },
-            {
-              id: 'd',
-              headline: 'Transitioning to another section',
-              img: data.easy3,
-              alt: ''
-            },
-        ]
-
+        {
+            id: 'd',
+            headline: "Viewing a driver's recent activity",
+            img: data.avail4,
+            alt: ''
+        },
+    ]
 }) => (
   
 
@@ -56,7 +51,7 @@ export default ({data,
 
             <WorkIntro>
                 <WorkTitle title="Avail" />
-                <p>I designed and helped to build an iOS/Android app which allows hauliers and
+                <p>I designed and coded the fron-end of an iOS/Android app which allows hauliers and
                 drivers to connect with each other - offering and accepting haulage jobs on the go.</p>
                 <WorkDetail>
                 <List>
@@ -70,7 +65,7 @@ export default ({data,
             </WorkIntro>
 
 
-            <WorkImages images={images} />
+            <WorkImages images={images} height="full" />
             
             
         </article>
@@ -80,7 +75,7 @@ export default ({data,
 
 export const homeQuery = graphql`
     query availQuery {
-      easy1:  file(relativePath: { regex: "/easycare1-xhdpi/" }) {
+      avail1:  file(relativePath: { regex: "/avail1@2x-80/" }) {
         absolutePath
         childImageSharp {
           fluid(maxWidth:1200, quality: 100) {
@@ -90,7 +85,7 @@ export const homeQuery = graphql`
           }
         }
       }
-      easy2:  file(relativePath: { regex: "/easycare-progress/" }) {
+      avail2:  file(relativePath: { regex: "/avail2@2x-80/" }) {
         absolutePath
         childImageSharp {
           fluid(maxWidth:1200, quality: 100) {
@@ -100,7 +95,17 @@ export const homeQuery = graphql`
           }
         }
       }
-      easy3:  file(relativePath: { regex: "/easycare-assessments/" }) {
+      avail3:  file(relativePath: { regex: "/avail3@2x-80/" }) {
+        absolutePath
+        childImageSharp {
+          fluid(maxWidth:1200, quality: 100) {
+            ...GatsbyImageSharpFluid_withWebp
+            presentationWidth
+            aspectRatio
+          }
+        }
+      }
+      avail4:  file(relativePath: { regex: "/avail4@2x-80/" }) {
         absolutePath
         childImageSharp {
           fluid(maxWidth:1200, quality: 100) {

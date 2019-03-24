@@ -7,13 +7,13 @@ import Header from '../components/header'
 
 export default ({data}) => (
   <div>
-  <Header />
+    <Header />
     <Layout>
-        <SEO title="Iain Durie - UX Engineer" />
-        <Work projects={data} />
-        <Skills />
+      <SEO title="Iain Durie - UX Engineer" />
+      <Work projects={data} />
+      <Skills />
     </Layout>
-    </div>
+  </div>
 )
 
 
@@ -29,7 +29,7 @@ export const homeQuery = graphql`
           }
         }
       }
-      mainAvail:  file(relativePath: { regex: "/avail1-xhdpi/" }) {
+      mainAvail:  file(relativePath: { regex: "/avail1@2x-80/" }) {
         absolutePath
         childImageSharp {
           fluid(maxWidth:800, quality: 100) {

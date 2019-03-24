@@ -2,24 +2,48 @@ import React from "react"
 import Layout from "../components/layout"
 import WorkTitle from "../components/work-title"
 import List from '../components/list'
-import Image from "gatsby-image"
 import WorkDetail from '../components/work-detail'
 import WorkIntro from '../components/work-intro'
 import BackLink from '../components/back-link'
+import WorkImages from '../components/work-images'
 import { rhythm } from "../utils/typography";
 
-export default ({data}) => (
+export default ({data, 
+  images = [
+          {
+            id: 'a',
+            headline: "Viewing a list of a driver's available jobs",
+            img: data.easy1,
+            alt: ''
+          },
+          {
+            id: 'b',
+            headline: 'Rejecting a job by dragging left',
+            img: data.easy2,
+            alt: ''
+          },
+          {
+              id: 'c',
+              headline: "Viewing a driver's schedule",
+              img: data.easy3,
+              alt: ''
+            },
+          {
+            id: 'd',
+            headline: "Viewing a driver's recent activity",
+            img: data.easy3,
+            alt: ''
+          },
+      ]}) => (
     <Layout>
-         <BackLink />
+        <BackLink />
         <article css={{padding:rhythm(5) + ' ' + rhythm(1.25)}}>
 
         <WorkIntro>
             <WorkTitle title="Bloom sign-up" />
             <p>This is a sign-up experience for Bloom, a procurement platform. The sign-up preocess needs to ensure
-                users stay engaged through the data capture process.
+                users stay engaged through the entire data capture process.
             </p>
-            </WorkIntro>
-
 
             <WorkDetail>
                 <List>
@@ -29,13 +53,12 @@ export default ({data}) => (
                     <li>Prototypes</li>
                 </List>
             </WorkDetail>
+            </WorkIntro>
 
-
-    
-            
-
+            <WorkImages images={images} />
         </article>
     </Layout>
+
   )
 
 

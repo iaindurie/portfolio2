@@ -1,5 +1,4 @@
 import React from "react"
-import styles from "./contact-link.module.css"
 import theme from './../utils/variables'
 import { Link } from 'gatsby'
 import  { rhythm } from './../utils/typography'
