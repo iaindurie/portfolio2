@@ -12,54 +12,59 @@ export default ({data,
     images = [
             {
               id: 'a',
-              headline: "Viewing a list of a driver's available jobs",
-              img: data.easy1,
+              headline: "Viewing a driver's schedule",
+              img: data.ringtons1,
               alt: ''
             },
             {
               id: 'b',
-              headline: 'Rejecting a job by dragging left',
-              img: data.easy2,
+              headline: "Viewing a customer's basket",
+              img: data.ringtons2,
               alt: ''
             },
             {
                 id: 'c',
-                headline: "Viewing a driver's schedule",
-                img: data.easy3,
+                headline: "Viewing a customer's profile",
+                img: data.ringtons3,
                 alt: ''
               },
             {
               id: 'd',
-              headline: "Viewing a driver's recent activity",
-              img: data.easy3,
+              headline: "Viewing a customer's history",
+              img: data.ringtons4,
               alt: ''
             },
         ]}) => (
     <Layout>
        <BackLink />
-        <article css={{padding:rhythm(5) + ' ' + rhythm(1.25)}}>
+        <article css={{
+            padding:rhythm(5) + ' ' + rhythm(1.25),
+            display:'grid',
+            gridTemplateColumns:'minmax(25%, 350px) 1fr',
+            gridGap: rhythm(2)
+        }}>
 
         <WorkIntro>
             <WorkTitle title="Perfect Image / BI" />
-            <p>A UWP app that helps Ringtons delivery drivers plan and execute their working day.
+            <p>A <acronym title="Universal Windows Platform">UWP</acronym> app that helps Ringtons delivery drivers plan and execute their working day.
           Users can organise their delivery schedule, manage users, reconcile stock and take payments - making their 
           working day more efficient, and their ability to sell items easier.</p>
-          <WorkDetail>
-                <List>
-                <li>User research</li>
-                    <li>User flows</li>
-                    <li>Wireframes</li>
-                    <li>Mockups</li>
-                    <li>XAML coding</li>
-                </List>
-            </WorkDetail>
+            <WorkDetail>
+                    <List>
+                    <li>User research</li>
+                        <li>User flows</li>
+                        <li>Wireframes</li>
+                        <li>Mockups</li>
+                        <li>XAML coding</li>
+                    </List>
+                </WorkDetail>
             </WorkIntro>
 
 
             
             
 
-           <WorkImages images={images} />
+           <WorkImages images={images} height="true" />
 
         </article>
     </Layout>
@@ -67,7 +72,7 @@ export default ({data,
 
   export const ringtonsQuery = graphql`
   query ringtonsQuery {
-    easy1:  file(relativePath: { regex: "/easycare1-xhdpi/" }) {
+    ringtons1:  file(relativePath: { regex: "/ringtons1@2x-80/" }) {
       absolutePath
       childImageSharp {
         fluid(maxWidth:1200, quality: 100) {
@@ -77,7 +82,7 @@ export default ({data,
         }
       }
     }
-    easy2:  file(relativePath: { regex: "/easycare-progress/" }) {
+    ringtons2:  file(relativePath: { regex: "/ringtons2@2x-80/" }) {
       absolutePath
       childImageSharp {
         fluid(maxWidth:1200, quality: 100) {
@@ -87,7 +92,7 @@ export default ({data,
         }
       }
     }
-    easy3:  file(relativePath: { regex: "/easycare-assessments/" }) {
+    ringtons3:  file(relativePath: { regex: "/ringtons3@2x-80/" }) {
       absolutePath
       childImageSharp {
         fluid(maxWidth:1200, quality: 100) {
@@ -97,5 +102,15 @@ export default ({data,
         }
       }
     }
+    ringtons4:  file(relativePath: { regex: "/ringtons4@2x-80/" }) {
+        absolutePath
+        childImageSharp {
+          fluid(maxWidth:1200, quality: 100) {
+            ...GatsbyImageSharpFluid_withWebp
+            presentationWidth
+            aspectRatio
+          }
+        }
+      }
   }
 `

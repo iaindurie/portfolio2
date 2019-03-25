@@ -48,25 +48,23 @@ export default ({data,
             gridTemplateColumns:'minmax(25%, 350px) 1fr',
             gridGap: rhythm(2)
         }}>
-
             <WorkIntro>
                 <WorkTitle title="Avail" />
                 <p>I designed and coded the fron-end of an iOS/Android app which allows hauliers and
                 drivers to connect with each other - offering and accepting haulage jobs on the go.</p>
                 <WorkDetail>
-                <List>
-                    <li>User research</li>
-                    <li>User flows</li>
-                    <li>Wireframes</li>
-                    <li>Mockups</li>
-                    <li>XAML coding</li>
-                </List>
-            </WorkDetail>
+                    <List>
+                        <li>User research</li>
+                        <li>User flows</li>
+                        <li>Wireframes</li>
+                        <li>Mockups</li>
+                        <li>XAML coding</li>
+                    </List>
+                </WorkDetail>
             </WorkIntro>
 
 
             <WorkImages images={images} height="full" />
-            
             
         </article>
     </Layout>

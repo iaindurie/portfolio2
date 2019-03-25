@@ -12,32 +12,43 @@ export default ({data,
   images = [
           {
             id: 'a',
-            headline: "Viewing a list of a driver's available jobs",
-            img: data.easy1,
+            headline: "Finding a user's company",
+            img: data.bloom1,
             alt: ''
           },
           {
             id: 'b',
-            headline: 'Rejecting a job by dragging left',
-            img: data.easy2,
+            headline: 'Confirming company details',
+            img: data.bloom2,
             alt: ''
           },
           {
               id: 'c',
-              headline: "Viewing a driver's schedule",
-              img: data.easy3,
+              headline: "Editing company details",
+              img: data.bloom3,
               alt: ''
             },
           {
             id: 'd',
-            headline: "Viewing a driver's recent activity",
-            img: data.easy3,
+            headline: "Entering sign-up details",
+            img: data.bloom4,
+            alt: ''
+          },
+          {
+            id: 'e',
+            headline: "Awaiting user confirmation",
+            img: data.bloom5,
             alt: ''
           },
       ]}) => (
     <Layout>
         <BackLink />
-        <article css={{padding:rhythm(5) + ' ' + rhythm(1.25)}}>
+        <article css={{
+            padding:rhythm(5) + ' ' + rhythm(1.25),
+            display:'grid',
+            gridTemplateColumns:'minmax(25%, 350px) 1fr',
+            gridGap: rhythm(2)
+        }}>
 
         <WorkIntro>
             <WorkTitle title="Bloom sign-up" />
@@ -65,7 +76,7 @@ export default ({data,
 export const homeQuery = graphql`
     query bloomQuery {
       
-      bloom1:  file(relativePath: { regex: "/bloom-hdpi/" }) {
+      bloom1:  file(relativePath: { regex: "/bloom1@2x-80/" }) {
         absolutePath
         childImageSharp {
           fluid(maxWidth:1200, quality: 100) {
@@ -76,7 +87,7 @@ export const homeQuery = graphql`
         }
       }
 
-      bloom2:  file(relativePath: { regex: "/bloom-hdpi/" }) {
+      bloom2:  file(relativePath: { regex: "/bloom2@2x-80/" }) {
         absolutePath
         childImageSharp {
           fluid(maxWidth:1200, quality: 100) {
@@ -87,7 +98,7 @@ export const homeQuery = graphql`
         }
       }
 
-      bloom3:  file(relativePath: { regex: "/bloom-hdpi/" }) {
+      bloom3:  file(relativePath: { regex: "/bloom3@2x-80/" }) {
         absolutePath
         childImageSharp {
           fluid(maxWidth:1200, quality: 100) {
@@ -98,7 +109,7 @@ export const homeQuery = graphql`
         }
       }
 
-      bloom4:  file(relativePath: { regex: "/bloom-hdpi/" }) {
+      bloom4:  file(relativePath: { regex: "/bloom4@2x-80/" }) {
         absolutePath
         childImageSharp {
           fluid(maxWidth:1200, quality: 100) {
@@ -109,7 +120,7 @@ export const homeQuery = graphql`
         }
       }
 
-      bloom5:  file(relativePath: { regex: "/bloom-hdpi/" }) {
+      bloom5:  file(relativePath: { regex: "/bloom5@2x-80/" }) {
         absolutePath
         childImageSharp {
           fluid(maxWidth:1200, quality: 100) {

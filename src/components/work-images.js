@@ -35,7 +35,7 @@ class WorkImages extends Component {
           <div css={{marginTop:'-90px',maxWidth:'1200px', gridColumnStart:'2', gridRowStart:'1'}}>
         
             {images.map(i => (
-              <figure key={i.id} css={{  height:'95vh', marginBottom:rhythm(7)}}>
+              <figure key={i.id} css={{  minHeight:'95vh', marginBottom:rhythm(7)}}>
 
                 <InView triggerOnce="true">
                     {({ inView, ref }) => (
@@ -69,26 +69,35 @@ class WorkImages extends Component {
                     )}
                 </InView>
             
-    
-                    <Link to="/" target="_blank" css={{
-                        textDecoration:'none',
-                        display:'block',
-                        cursor:'zoom-in',
-                        '@media(min-width:900px)' : {
-                            paddingLeft:rhythm(2),
-                            paddingRight:rhythm(2),
-                            //maxWidth:props.mainPic.childImageSharp.fluid.presentationWidth,
-                            flex:'1',
-                            height:'100%',
-                            '> .gatsby-image-wrapper':{
-                              height:'100%'
-                            },
-                            '& img' : {
-                              objectFit: 'contain !important'
-                            }
-                        }}}>
-                        <Image fluid={i.img.childImageSharp.fluid} alt={i.alt} />
-                    </Link>
+    {fullHeight === 'true' ?
+    <Link to="/" target="_blank" css={{
+        textDecoration:'none',
+        display:'block',
+        cursor:'zoom-in',
+        '@media(min-width:900px)' : {
+            paddingLeft:rhythm(2),
+            paddingRight:rhythm(2),
+            //maxWidth:props.mainPic.childImageSharp.fluid.presentationWidth,
+            flex:'1',
+            height:'100%',
+            '> .gatsby-image-wrapper':{
+              height:'100%'
+            },
+            '& img' : {
+              objectFit: 'contain !important'
+            }
+        }}}>
+        <Image fluid={i.img.childImageSharp.fluid} alt={i.alt} />
+    </Link> :
+    <Link to="/" target="_blank" css={{
+        textDecoration:'none',
+        display:'block',
+        cursor:'zoom-in',
+        }}>
+        <Image fluid={i.img.childImageSharp.fluid} alt={i.alt} />
+    </Link>
+    }
+                   
              
               </figure>
             ))}

@@ -18,6 +18,7 @@ const WorkItem = (props) => (
         marginBottom:rhythm(5),
         flexDirection:'row',
         height:'95vh',
+        maxHeight:'none'
       },
     }}>
 
@@ -58,7 +59,7 @@ const WorkItem = (props) => (
           // position: 'relative',
           '@media(max-width:899px)' : {
             order:'1',
-            marginBottom:rhythm(1)
+            marginBottom:rhythm(1),
           },
           display:'flex',
           flexDirection:'column',
