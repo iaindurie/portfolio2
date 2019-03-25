@@ -9,9 +9,9 @@ import { style } from "glamor";
 
 const WorkTitle = (props) => (
   
-    <header css={{marginBottom:rhythm(3)}}>
+    <header css={{marginBottom:rhythm(3), maxWidth:'600px', marginLeft:'auto', marginRight:'auto'}}>
         {props.children}
-        </header>
+    </header>
 
 )
 

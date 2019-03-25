@@ -1,5 +1,10 @@
 .workDetail {
     position:sticky;
     top:50px;
+}
+
+@media(min-width: 1050px) {
+    .workDetail {
     max-width:350px;
+    }
 }

@@ -59,7 +59,7 @@ const WorkItem = (props) => (
 
       <Link to={props.page} css={{
           textDecoration:'none',
-          '@media(max-width:10499px)' : {
+          '@media(max-width:1049px)' : {
             order:'1',
             marginBottom:rhythm(1),
             alignSelf:'flex-start'

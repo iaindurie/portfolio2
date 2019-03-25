@@ -29,20 +29,34 @@ class WorkImages extends Component {
       render() {
           
         const images = this.props.images;
-        const fullHeight = this.props.height;
+        const height = this.props.height;
+        const maxWidth = this.props.maxWidth;
      
         return (
-          <div css={{marginTop:'-90px',maxWidth:'1200px', gridColumnStart:'2', gridRowStart:'1'}}>
+          <div css={{
+            '@media(min-width:1049px)' : {
+              marginTop:'-90px'
+            },
+            maxWidth:'1200px',
+            gridColumnStart:'2',
+            gridRowStart:'1'
+          }}>
         
             {images.map(i => (
-              <figure key={i.id} css={{  minHeight:'95vh', marginBottom:rhythm(7)}}>
+              <figure key={i.id} css={{
+                '@media(min-width:1050px)' : {
+                  
+                },
+                minHeight:'95vh',
+                marginBottom:rhythm(7)
+              }}>
 
                 <InView triggerOnce="true">
                     {({ inView, ref }) => (
                     <figcaption css={{
                         paddingLeft:rhythm(0.5)
                     }}>
-                        {/* <svg></svg> */}
+                        {/* <svg>arrow animation to go here</svg> */}
                         <h3 ref={ref} className={inView ? titleIn : titleOut} css={{
                             fontSize:rhythm(0.5),
                             fontStyle:'italic',
@@ -68,24 +82,26 @@ class WorkImages extends Component {
                     </figcaption>
                     )}
                 </InView>
-            
-    {fullHeight === 'true' ?
+          
+          {console.log(height)}
+    {height === 'full' ?
     <Link to="/" target="_blank" css={{
         textDecoration:'none',
         display:'block',
         cursor:'zoom-in',
-        '@media(min-width:900px)' : {
-            paddingLeft:rhythm(2),
-            paddingRight:rhythm(2),
-            //maxWidth:props.mainPic.childImageSharp.fluid.presentationWidth,
-            flex:'1',
-            height:'100%',
+        height:'95vh',
             '> .gatsby-image-wrapper':{
               height:'100%'
             },
             '& img' : {
               objectFit: 'contain !important'
-            }
+            },
+        '@media(min-width:1050px)' : {
+            paddingLeft:rhythm(2),
+            paddingRight:rhythm(2),
+            //maxWidth:this.props.mainPic.childImageSharp.fluid.presentationWidth,
+            flex:'1',
+            
         }}}>
         <Image fluid={i.img.childImageSharp.fluid} alt={i.alt} />
     </Link> :
