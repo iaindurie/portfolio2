@@ -12,21 +12,32 @@ const WorkItem = (props) => (
       display:'flex',
       flexDirection:'column',
       marginBottom:rhythm(3),
-      '@media(min-width: 900px)' : {
-        alignItems:'center',
+      alignItems:'center',
+      '@media(min-width: 1050px)' : {
         justifyContent:'center',
-        marginBottom:rhythm(5),
+        marginBottom:rhythm(2),
         flexDirection:'row',
         height:'95vh',
         maxHeight:'none'
       },
+      '@media(min-width: 1300px)' : {
+        marginBottom:rhythm(5)
+      }
     }}>
 
       <div css={{
-         '@media(max-width:899px)' : {
-          order:'2'
+         maxWidth: props.mobileMaxWidth ? props.mobileMaxWidth : 'none',
+
+         '@media(max-width:1049px)' : {
+          order:'2',
+          flex:'100vh',
+          width:'100%',
+          '> .gatsby-image-wrapper':{
+            height:'100%'
+          },
         },
-        '@media(min-width:900px)' : {
+        '@media(min-width:1050px)' : {
+          maxWidth: 'none',
           paddingLeft:rhythm(2),
           paddingRight:rhythm(2),
           maxWidth:props.mainPic.childImageSharp.fluid.presentationWidth,
@@ -46,20 +57,12 @@ const WorkItem = (props) => (
         }
       </div>
 
-
-
-
-      {/**/}
-
-
-
       <Link to={props.page} css={{
           textDecoration:'none',
-          // zIndex:'2',
-          // position: 'relative',
-          '@media(max-width:899px)' : {
+          '@media(max-width:10499px)' : {
             order:'1',
             marginBottom:rhythm(1),
+            alignSelf:'flex-start'
           },
           display:'flex',
           flexDirection:'column',

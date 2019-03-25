@@ -30,14 +30,15 @@ class Work extends React.Component {
         }
 
       return (
-        <div>
+        <div css={{paddingTop:rhythm(2)}}>
   
         <WorkItem
         title="Avail"
         page="avail"
         type="Mobile app"
         mainPic={data.mainAvail}
-        alt="Avail app screenshot" />
+        alt="Avail app screenshot"
+        mobileMaxWidth="500px" />
 
         <WorkItem
           title="EasyCare Respond"
@@ -51,7 +52,8 @@ class Work extends React.Component {
         type="Mobile app"
         page="ringtons"
         mainPic={data.mainRingtons}
-        alt="Ringtons app screenshot" />
+        alt="Ringtons app screenshot"
+        mobileMaxWidth="550px"  />
 
         <WorkItem
         title="Bloom"

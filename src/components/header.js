@@ -10,7 +10,7 @@ const Header = ({ siteTitle, jobDesc }) => (
       padding: rhythm(1) + ' ' + rhythm(1.25),
       textAlign: 'center',
       marginBottom:rhythm(2),
-      '@media(min-width: 900px)' : {
+      '@media(min-width: 1050px)' : {
         textAlign: 'left',
         position:'fixed',
         zIndex:'2',
