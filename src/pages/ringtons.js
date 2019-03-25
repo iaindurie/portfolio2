@@ -45,7 +45,7 @@ export default ({data,
         }}>
 
         <WorkIntro>
-            <WorkTitle title="Perfect Image / BI" />
+            <WorkTitle title="Ringtons" />
             <p>A <acronym title="Universal Windows Platform">UWP</acronym> app that helps Ringtons delivery drivers plan and execute their working day.
           Users can organise their delivery schedule, manage users, reconcile stock and take payments - making their 
           working day more efficient, and their ability to sell items easier.</p>
@@ -64,7 +64,7 @@ export default ({data,
             
             
 
-           <WorkImages images={images} height="true" />
+           <WorkImages images={images} height="full" />
 
         </article>
     </Layout>
