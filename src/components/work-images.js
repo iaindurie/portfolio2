@@ -2,6 +2,7 @@ import React, { Component } from "react"
 import Image from "gatsby-image"
 import { Link } from "gatsby"
 import  { rhythm } from './../utils/typography'
+//import 'intersection-observer'
 import { InView } from 'react-intersection-observer'
 import styles from './work-images.module.css'
 import { css } from 'glamor'
@@ -19,12 +20,22 @@ let titleOut = css({
     color: 'white'
 })
 
+// const isClient = typeof window !== 'undefined';
+
+// async function loadPolyfills() {
+//   if(isClient) {
+//       await import('intersection-observer')
+//   }
+// }
+
+
 
 class WorkImages extends Component {
     constructor(props) {
         super(props);
     
       }
+
       
       render() {
           

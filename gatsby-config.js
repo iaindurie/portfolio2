@@ -19,5 +19,11 @@ module.exports = {
           pathToConfigModule: `src/utils/typography`,
         },
       },
+      {
+        resolve: `gatsby-plugin-polyfill-io`,
+        options: {
+           features: [`IntersectionObserver`]
+        },
+     }
     ],
   }
