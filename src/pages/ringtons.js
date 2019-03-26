@@ -37,11 +37,14 @@ export default ({data,
         ]}) => (
     <Layout>
        <BackLink />
-        <article css={{
-            padding:rhythm(5) + ' ' + rhythm(1.25),
+       <article css={{
+          padding:rhythm(5) + ' ' + rhythm(1.25),
+          '@media(min-width:1050px)' : {
             display:'grid',
             gridTemplateColumns:'minmax(25%, 350px) 1fr',
             gridGap: rhythm(2)
+          },
+            
         }}>
 
         <WorkIntro>
