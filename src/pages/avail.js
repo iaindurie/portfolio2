@@ -53,7 +53,7 @@ export default ({data,
         }}>
             <WorkIntro>
                 <WorkTitle title="Avail" />
-                <p>I designed and coded the fron-end of an iOS/Android app which allows hauliers and
+                <p>I designed and coded the front-end of an iOS/Android app which allows hauliers and
                 drivers to connect with each other - offering and accepting haulage jobs on the go.</p>
                 <WorkDetail>
                     <List>

@@ -60,10 +60,6 @@ export default ({data,
                 </WorkDetail>
             </WorkIntro>
 
-
-            
-            
-
            <WorkImages images={images} height="full" />
 
         </article>

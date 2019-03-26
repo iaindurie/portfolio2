@@ -26,16 +26,10 @@ export default ({data,
             },
             {
                 id: 'c',
-                headline: 'Viewing assessments',
+                headline: 'User dashboard',
                 img: data.easy3,
                 alt: ''
-              },
-            {
-              id: 'd',
-              headline: 'Transitioning to another section',
-              img: data.easy3,
-              alt: ''
-            },
+              }
         ]}) => (
     <Layout>
         <BackLink />

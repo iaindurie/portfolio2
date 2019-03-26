@@ -9,7 +9,7 @@ import theme from "../utils/variables";
 
 let titleIn = css({
     color: theme.colors.primary,
-    transform: 'translateX(30px)',
+    //transform: 'translateX(30px)',
     '&::after' : {
         transform: 'scaleX(1) !important'
     }
@@ -33,7 +33,7 @@ class WorkImages extends Component {
         const maxWidth = this.props.maxWidth;
      
         return (
-          <div css={{
+          <div className={styles.work} css={{
             '@media(min-width:1049px)' : {
               marginTop:'-90px'
             },
@@ -54,9 +54,12 @@ class WorkImages extends Component {
                 <InView triggerOnce="true">
                     {({ inView, ref }) => (
                     <figcaption css={{
-                        paddingLeft:rhythm(0.5)
+                        paddingLeft:rhythm(0.5),
+                        textAlign:'center',
+                        zIndex:'-1',
+                        position: 'relative'
                     }}>
-                        {/* <svg>arrow animation to go here</svg> */}
+                        
                         <h3 ref={ref} className={inView ? titleIn : titleOut} css={{
                             fontSize:rhythm(0.5),
                             fontStyle:'italic',
@@ -78,15 +81,29 @@ class WorkImages extends Component {
                                 background:theme.colors.strip,
                                 transition: 'all 0.25s 1s ease-in-out'
                             }
-                        }}>{i.headline}</h3>
+                        }}>
+                        <svg className={inView ? styles.down : styles.up} css={{
+                          position:'absolute',
+                          bottom:'10px',
+                          left:'0',
+                          fill:theme.colors.text,
+                          stroke: theme.colors.text,
+                        strokeDashoffset: '1000',
+                        strokeDasharray:'1000'}} height="195" width="30" x="0px" y="0px" viewBox="0 0 40 260">
+                        <g transform="translate(0,-952.36218)">
+                        <path d="M19,1206.05l-15.31-14.41c-0.38-0.36-1.06-0.34-1.42,0.05c-0.36,0.38-0.37,1,0.05,1.42l17,16c0.47,0.38,1.04,0.28,1.38,0h0
+                          l17-16c0.4-0.39,0.41-1.05,0.05-1.42c-0.37-0.38-1.04-0.41-1.42-0.05L21,1206.05"/>
+                      </g>
+                        <line className={styles.path} stroke-width="2" stroke-linecap="round" stroke-miter-limit="10" x1="20" y1="256" x2="20" y2="5"/>
+
+                        </svg>
+                        {i.headline}</h3>
                     </figcaption>
                     )}
                 </InView>
-          
-          {console.log(height)}
+       
     {height === 'full' ?
-    <Link to="/" target="_blank" css={{
-        textDecoration:'none',
+    <div css={{
         display:'block',
         cursor:'zoom-in',
         height:'95vh',
@@ -104,14 +121,13 @@ class WorkImages extends Component {
             
         }}}>
         <Image fluid={i.img.childImageSharp.fluid} alt={i.alt} />
-    </Link> :
-    <Link to="/" target="_blank" css={{
-        textDecoration:'none',
+    </div> :
+    <div css={{
         display:'block',
         cursor:'zoom-in',
         }}>
         <Image fluid={i.img.childImageSharp.fluid} alt={i.alt} />
-    </Link>
+    </div>
     }
                    
              
