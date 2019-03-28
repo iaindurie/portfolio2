@@ -2,18 +2,15 @@ import React from "react"
 import Layout from "../components/layout"
 import Work from "../components/work"
 import SEO from '../components/seo'
-import Skills from '../components/skills'
-import Header from '../components/header'
+
 
 export default ({data}) => (
-  <div>
-    <Header headerImage={data.headerImage.childImageSharp.fluid} />
+
     <Layout>
       <SEO title="Iain Durie - UX Engineer" />
       <Work projects={data} />
-      {/* <Skills /> */}
     </Layout>
-  </div>
+
 )
 
 

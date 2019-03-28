@@ -20,7 +20,7 @@
 .skills {
     display:grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto auto;
+    grid-template-rows: auto;
 }
 @media(min-width:960px) {
     .skills {
