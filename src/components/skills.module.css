@@ -13,10 +13,10 @@
     opacity:0.5
 }
 
-.list li:nth-child(odd) {
+/* .list li:nth-child(odd) {
     color:#555555;
 
-}
+} */
 .skills {
     display:grid;
     grid-template-columns: 1fr 1fr;
@@ -24,6 +24,6 @@
 }
 @media(min-width:960px) {
     .skills {
-        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
     }
 }

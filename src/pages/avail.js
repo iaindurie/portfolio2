@@ -6,6 +6,7 @@ import WorkDetail from '../components/work-detail'
 import WorkIntro from '../components/work-intro'
 import BackLink from '../components/back-link'
 import WorkImages from '../components/work-images'
+import SEO from '../components/seo'
 import { rhythm } from "../utils/typography";
 
 
@@ -40,6 +41,7 @@ export default ({data,
   
 
     <Layout>
+      <SEO title="Iain Durie - Avail mobile app" />
         <BackLink />
         
         <article css={{

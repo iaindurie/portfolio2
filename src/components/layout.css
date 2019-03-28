@@ -7,8 +7,22 @@ html {
     margin: 0;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    
+
+    /* font-size: calc(1em + 1vw); */
   }
+
+  /* @media screen and (min-width: 320px) {
+    html {
+      font-size: calc(16px + 6 * ((80vw - 320px) / 680));
+    }
+  }
+  @media screen and (min-width: 1600px) {
+    html {
+      font-size: 18px;
+    }
+  } */
+
+
   body:not(.visible) #logo {
     transform: translateY(-150%);
   }

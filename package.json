@@ -27,6 +27,7 @@
     "glamor": "^2.20.40",
     "intersection-observer": "^0.5.1",
     "react": "^16.8.4",
+    "react-custom-scrollbars": "^4.2.1",
     "react-dom": "^16.8.4",
     "react-helmet": "^5.2.0",
     "react-intersection-observer": "^8.22.3",

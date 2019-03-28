@@ -7,11 +7,11 @@ import Header from '../components/header'
 
 export default ({data}) => (
   <div>
-    <Header />
+    <Header headerImage={data.headerImage.childImageSharp.fluid} />
     <Layout>
       <SEO title="Iain Durie - UX Engineer" />
       <Work projects={data} />
-      <Skills />
+      {/* <Skills /> */}
     </Layout>
   </div>
 )
@@ -36,6 +36,13 @@ export const homeQuery = graphql`
             ...GatsbyImageSharpFluid_withWebp
             presentationWidth
             aspectRatio
+          }
+        }
+      }
+      headerImage:  file(relativePath: { regex: "/header/" }) {
+        childImageSharp {
+          fluid(maxWidth:2000, quality: 70) {
+            ...GatsbyImageSharpFluid_withWebp
           }
         }
       }

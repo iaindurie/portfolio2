@@ -6,6 +6,7 @@ import WorkDetail from '../components/work-detail'
 import WorkIntro from '../components/work-intro'
 import BackLink from '../components/back-link'
 import WorkImages from '../components/work-images'
+import SEO from '../components/seo'
 import { rhythm } from "../utils/typography";
 
 export default ({data, 
@@ -19,6 +20,7 @@ export default ({data,
             
         ]}) => (
     <Layout>
+      <SEO title="Iain Durie - Perfect Image / BI" />
         <BackLink />
         <article css={{
           padding:rhythm(5) + ' ' + rhythm(1.25),
