@@ -34,7 +34,11 @@ class Layout extends Component {
 
         <Blurb isBlurbShown={this.state.blurbShown} />
 
-        <main css={{minHeight:'100vh'}}>
+        <main css={{
+          minHeight:'100vh',
+          transform:this.state.blurbShown ? 'translateY(0)' : 'translateY(-100vh)',
+          transition:'all 0.35s ease-in-out'
+          }}>
           {this.props.children}
         </main>
 

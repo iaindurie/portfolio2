@@ -13,31 +13,34 @@ class Blurb extends Component {
       return (
 
     <section css={{
-        height: isShown ? '100vh' : '0',
-        overflow:'hidden',
-        position:'fixed',
-        top:'0',
-        left:'0',
-        width:'100%',
+        // height: isShown ? '100vh' : '0',
+        // overflow:'hidden',
+        // position:'fixed',
+        // top:'0',
+        // left:'0',
+        // width:'100%',
+        height:'100vh',
+        transform: isShown ? 'translateY(0)' : 'translateY(-100%)',
         zIndex:'2',
         transition:'all 0.35s ease-in-out',
         background:theme.colors.primary}}>
         
         <HeaderImage />
 
-        <Scrollbars style={{ height: '100%', height: '100%' }}>
-          <div css={{width:'100%', height:'100%',display:'flex',alignItems: 'center',
+      
+          <div css={{width:'100%', height:'100%',display:'flex',alignItems: 'center',overflowY:'scroll',
             justifyContent: 'center',padding:rhythm(2),color:'white', position:'relative', zIndex:'2'}}>
           <div css={{width:'65%'}}>
             <h2 css={{marginBottom:rhythm(0.5)}}>About me</h2>
             <p css={{maxWidth:'600px', marginBottom:rhythm(3)}}>I'm a UX Engineer<sup>*</sup> with skills that transcend the entire UX spectrum - from research and creation,through to implementation.
               In short, I plan, design and code things that people use.
             </p>
+            <h2>What I do</h2>
             <Skills />
             </div>
            
           </div>
-        </Scrollbars>
+        
       
         <small css={{fontSize:'11px',color:'white',position:'absolute', bottom:'10px', right:'12px'}}><sup>*</sup> Also known as UX Unicorns</small>
     </section>

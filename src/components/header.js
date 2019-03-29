@@ -25,9 +25,11 @@ class Header extends Component {
       let isClicked = this.props.isAboutClicked;
 
     if(isClicked) {
-      document.body.classList.add('hidden')
+      document.body.classList.add('hidden');
+      console.log(isClicked);
     } else {
-      document.body.classList.remove('hidden')
+      document.body.classList.remove('hidden');
+      console.log(isClicked);
     }
 
       return (
@@ -87,17 +89,18 @@ class Header extends Component {
       '&::after' : {
         position:'absolute',
         left:'-5px',
-        right:'-5px',
+        width: isClicked ? '26px' : 'calc(100% + 10px)',
         top:'0',
         bottom:'0',
         background:theme.colors.strip,
         content:`''`,
         zIndex:'-1',
-        transform:isClicked === true ? 'scaleX(1)' : 'scaleX(0)',
+        transform: isClicked ? 'scaleX(1)' : 'scaleX(0)',
         transformOrigin: 'right center',
         transition:'all 0.35s'
       }
-      }}>{!isClicked && 
+      }}>
+      {!isClicked && 
       <span css={{verticalAlign:'middle',display:'inline-block',}}>About me</span>
       }
       {isClicked &&
