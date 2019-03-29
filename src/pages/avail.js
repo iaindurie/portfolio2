@@ -42,7 +42,7 @@ export default ({data,
 
     <Layout>
       <SEO title="Iain Durie - Avail mobile app" />
-        <BackLink />
+        {/* <BackLink /> */}
         
         <article css={{
           padding:rhythm(5) + ' ' + rhythm(1.25),

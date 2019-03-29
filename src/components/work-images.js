@@ -20,15 +20,6 @@ let titleOut = css({
     color: 'white'
 })
 
-// const isClient = typeof window !== 'undefined';
-
-// async function loadPolyfills() {
-//   if(isClient) {
-//       await import('intersection-observer')
-//   }
-// }
-
-
 
 class WorkImages extends Component {
     constructor(props) {
@@ -96,7 +87,7 @@ class WorkImages extends Component {
                         <svg className={inView ? styles.down : styles.up} css={{
                           position:'absolute',
                           bottom:'10px',
-                          left:'0',
+                          left:'-13px',
                           fill:theme.colors.text,
                           stroke: theme.colors.text,
                         strokeDashoffset: '1000',

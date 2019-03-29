@@ -1,5 +1,6 @@
 import React, { Component } from "react"
 import ScrollLock, { TouchScrollable } from 'react-scrolllock'
+import Headroom from 'react-headroom'
 import Blurb from './blurb'
 import Header from './header'
 import Footer from './footer'
@@ -39,7 +40,9 @@ class Layout extends Component {
   render() {
     return (
       <div>
-        <Header onClick={this.switchBlurb} isAboutClicked={this.state.aboutClicked} />
+        <Headroom>
+          <Header onClick={this.switchBlurb} isAboutClicked={this.state.aboutClicked} />
+        </Headroom>
 
         <Blurb isBlurbShown={this.state.blurbShown} />
 

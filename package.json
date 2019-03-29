@@ -29,6 +29,7 @@
     "react": "^16.8.4",
     "react-custom-scrollbars": "^4.2.1",
     "react-dom": "^16.8.4",
+    "react-headroom": "^2.2.8",
     "react-helmet": "^5.2.0",
     "react-intersection-observer": "^8.22.3",
     "react-scrollbars-custom": "^4.0.0-alpha.10",

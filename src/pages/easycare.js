@@ -34,7 +34,7 @@ export default ({data,
         ]}) => (
     <Layout>
       <SEO title="Iain Durie - EasyCare Respond" />
-        <BackLink />
+        {/* <BackLink /> */}
 
         <article css={{
           padding:rhythm(5) + ' ' + rhythm(1.25),

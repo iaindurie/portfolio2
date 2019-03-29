@@ -44,7 +44,7 @@ export default ({data,
       ]}) => (
     <Layout>
       <SEO title="Iain Durie - Bloom sign-up" />
-        <BackLink />
+        {/* <BackLink /> */}
         <article css={{
           padding:rhythm(5) + ' ' + rhythm(1.25),
           '@media(min-width:1050px)' : {

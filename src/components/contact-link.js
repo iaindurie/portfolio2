@@ -15,7 +15,7 @@ const ContactLink = (props) => {
              }
         }}>
         
-        <svg className={styles.hands} aria-role="img" x="0px" y="0px" viewBox="0 0 1000 1000" width="180" Height="180" css={{fill:theme.colors.primary}}>
+        <svg className={styles.hands} aria-role="img" x="0px" y="0px" viewBox="0 0 1000 1000" width="150" Height="150" css={{fill:theme.colors.primary}}>
         <g className={styles.lines}>
 	<path d="M646.746,203.454c-2.314-2.333-6.083-2.349-8.416-0.035c-0.012,0.012-0.023,0.023-0.035,0.035l-40.17,40.051
 		c-2.334,2.314-2.35,6.083-0.034,8.416c0.011,0.012,0.022,0.023,0.034,0.035c2.321,2.307,6.07,2.307,8.392,0l40.17-40.051

@@ -25,10 +25,8 @@ class Header extends Component {
 
     if(isClicked) {
       document.body.classList.add('hidden');
-      console.log(isClicked);
     } else {
       document.body.classList.remove('hidden');
-      console.log(isClicked);
     }
 
       return (
@@ -36,11 +34,12 @@ class Header extends Component {
 
   <header css={{
       marginBottom:rhythm(2),
+      background:'rgba(255,255,255,0.75)',
       display:'flex',
       padding:rhythm(1),
       justifyContent:'space-between',
       alignItems:'flex-start',
-      position:'fixed',
+      //position:'fixed',
       zIndex:'3',
       width:'100%'
     }}>
