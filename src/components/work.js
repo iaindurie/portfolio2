@@ -19,6 +19,7 @@ class Work extends React.Component {
 
 
   render() {
+    console.log("Rendering: MenuButton");
       const data = this.props.projects;
 
       function onChange (isVisible) {

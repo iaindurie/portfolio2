@@ -32,6 +32,7 @@
     "react-helmet": "^5.2.0",
     "react-intersection-observer": "^8.22.3",
     "react-scrollbars-custom": "^4.0.0-alpha.10",
+    "react-scrolllock": "^4.0.1",
     "react-typography": "^0.16.19",
     "react-visibility-sensor": "^5.0.2",
     "typography": "^0.16.19"

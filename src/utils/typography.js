@@ -4,7 +4,7 @@ const typography = new Typography({
   baseFontSize: '18px',
   baseLineHeight: 1.66,
     headerFontFamily: [
-      'Libre Franlin',
+      'Libre Franklin',
       '-apple-system',
       'BlinkMacSystemFont',
       'Segoe UI',
@@ -17,7 +17,7 @@ const typography = new Typography({
       'Segoe UI Symbol',
     ],
     bodyFontFamily: [
-      'Libre Franlin',
+      'Libre Franklin',
       '-apple-system',
       'BlinkMacSystemFont',
       'Segoe UI',
@@ -33,7 +33,7 @@ const typography = new Typography({
     bodyWeight: 300,
     googleFonts: [
       {
-        name: 'Libre Franlin',
+        name: 'Libre Franklin',
         styles: ['300','600'],
       }
     ],

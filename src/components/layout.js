@@ -1,8 +1,10 @@
 import React, { Component } from "react"
+import ScrollLock, { TouchScrollable } from 'react-scrolllock'
 import Blurb from './blurb'
 import Header from './header'
 import Footer from './footer'
-import "./layout.css"
+import Main from './main'
+import "./layout.css";
 
 
 
@@ -26,6 +28,13 @@ class Layout extends Component {
     }));
   }
 
+  // shouldComponentUpdate(nextProps, nextState) {
+  //   if (this.state.blurbShown !== nextState.blurbShown) {
+  //     return false;
+  //   } else {
+  //     return true;
+  //   }
+  // }
     
   render() {
     return (
@@ -34,13 +43,11 @@ class Layout extends Component {
 
         <Blurb isBlurbShown={this.state.blurbShown} />
 
-        <main css={{
-          minHeight:'100vh',
-          transform:this.state.blurbShown ? 'translateY(0)' : 'translateY(-100vh)',
-          transition:'all 0.35s ease-in-out'
-          }}>
+        <Main isBlurbShown={this.state.blurbShown}>
           {this.props.children}
-        </main>
+        </Main>
+
+        <ScrollLock isActive={this.state.blurbShown} />
 
         <Footer />
       </div>

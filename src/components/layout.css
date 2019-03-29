@@ -10,10 +10,10 @@ html {
 
     /* font-size: calc(1em + 1vw); */
   }
-  .hidden {
+  /* .hidden {
     overflow:hidden;
     height:100vh;
-  }
+  } */
 
   /* @media screen and (min-width: 320px) {
     html {

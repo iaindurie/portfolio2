@@ -15,8 +15,7 @@ class Header extends Component {
     this.switchBlurb = this.switchBlurb.bind(this);
   }
 
-  switchBlurb(e) {
-    e.preventDefault();
+  switchBlurb() {
     this.props.onClick();
   }
     
@@ -36,18 +35,14 @@ class Header extends Component {
 
 
   <header css={{
-      textAlign: 'center',
       marginBottom:rhythm(2),
       display:'flex',
       padding:rhythm(1),
       justifyContent:'space-between',
       alignItems:'flex-start',
-      '@media(min-width: 1050px)' : {
-        textAlign: 'left',
-        position:'fixed',
-        zIndex:'3',
-        width:'100%'
-      }
+      position:'fixed',
+      zIndex:'3',
+      width:'100%'
     }}>
 
       <h1 css={{
@@ -78,14 +73,14 @@ class Header extends Component {
         }}>Iain Durie</span>
       </h1>
 
-      <a href="#" onClick={this.switchBlurb}
-      css={{textDecoration:'none',
-      display:'inline-block',
-      color: theme.colors.primary,
-      position: 'relative',
-      '&:hover::after' : {
-        transform:'scaleX(1)'
-      },
+      <span onClick={this.switchBlurb} aria-role="button" css={{
+        cursor:'pointer',
+        display:'inline-block',
+        color: theme.colors.primary,
+        position: 'relative',
+        '&:hover::after' : {
+          transform:'scaleX(1)'
+        },
       '&::after' : {
         position:'absolute',
         left:'-5px',
@@ -109,7 +104,7 @@ class Header extends Component {
       transform="translate(-41.01 -41.02)"/></svg>
       }
       
-      </a>
+      </span>
 
   
   </header>
