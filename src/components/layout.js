@@ -4,7 +4,6 @@ import Blurb from './blurb'
 import Header from './header'
 import Footer from './footer'
 import Main from './main'
-//import ScrollLock, { TouchScrollable } from 'react-scrolllock'
 import { disableBodyScroll, enableBodyScroll, clearAllBodyScrollLocks } from 'body-scroll-lock';
 import "./layout.css";
 

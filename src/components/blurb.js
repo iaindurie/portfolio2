@@ -2,6 +2,7 @@ import React, { Component } from "react"
 import theme from './../utils/variables'
 import Skills from './skills'
 import HeaderImage from './header-image'
+import { Scrollbars } from 'react-custom-scrollbars';
 import  { rhythm } from './../utils/typography';
 
 class Blurb extends Component {
@@ -12,7 +13,7 @@ class Blurb extends Component {
 
     <section css={{
         height: isShown ? '100vh' : '0',
-        overflow:'hidden',
+        overflowY:'scroll',
         position:'fixed',
         top:'0',
         left:'0',
@@ -28,7 +29,7 @@ class Blurb extends Component {
 
         <HeaderImage />
 
-      
+        
           <div css={{
               width:'100%',
               height:'100%',
@@ -51,9 +52,7 @@ class Blurb extends Component {
           <div css={{
               '@media(min-width:1000px)' : {
                 margin: '0 5vw',
-                // padding:rhythm(1)
               }
-             
             }}>
             <h2 css={{marginBottom:rhythm(0.5)}}>About me</h2>
             <p css={{maxWidth:'600px', marginBottom:rhythm(3)}}>I'm a UX Engineer<sup>*</sup> with skills that transcend the entire UX spectrum - from research and creation,through to implementation.

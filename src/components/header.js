@@ -20,11 +20,13 @@ class Header extends Component {
    
       let isClicked = this.props.isAboutClicked;
 
+      if (typeof document !== 'undefined') {
     if(isClicked) {
       document.documentElement.classList.add('hidden');
     } else {
       document.documentElement.classList.remove('hidden');
     }
+  }
 
       return (
 
