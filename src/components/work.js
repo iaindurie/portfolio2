@@ -4,7 +4,7 @@ import theme from './../utils/variables'
 import { StaticQuery } from "gatsby"
 import WorkItem from './work-item'
 import  { rhythm } from './../utils/typography'
-import VisibilitySensor from "react-visibility-sensor";
+//import VisibilitySensor from "react-visibility-sensor";
 
 class Work extends React.Component {
   constructor(props) {
@@ -22,13 +22,13 @@ class Work extends React.Component {
     console.log("Rendering: MenuButton");
       const data = this.props.projects;
 
-      function onChange (isVisible) {
-          if(isVisible === true) {
-            document.body.classList.add('visible');
-          } else {
-            document.body.classList.remove('visible')
-          }
-        }
+      // function onChange (isVisible) {
+      //     if(isVisible === true) {
+      //       document.body.classList.add('visible');
+      //     } else {
+      //       document.body.classList.remove('visible')
+      //     }
+      //   }
 
       return (
         <div css={{paddingTop:rhythm(2)}}>
@@ -78,9 +78,9 @@ class Work extends React.Component {
         alt="Respond app screenshot" />
 
 
-        <VisibilitySensor onChange={onChange}>
+        {/* <VisibilitySensor onChange={onChange}>
           <span aria-hidden="true" css={{position:'absolute', top:'120px', left:'0'}}>&nbsp;</span>
-        </VisibilitySensor>
+        </VisibilitySensor> */}
     </div>
       )
   }

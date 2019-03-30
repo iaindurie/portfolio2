@@ -107,7 +107,7 @@ class WorkImages extends Component {
     {height === 'full' ?
     <div css={{
         display:'block',
-        cursor:'zoom-in',
+        // cursor:'zoom-in',
         height:'95vh',
             '> .gatsby-image-wrapper':{
               height:'100%'

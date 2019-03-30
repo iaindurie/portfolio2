@@ -1,8 +1,6 @@
 import React, { Component } from "react"
 import theme from './../utils/variables'
-import Image from 'gatsby-image'
 import Skills from './skills'
-import { Scrollbars } from 'react-custom-scrollbars'
 import HeaderImage from './header-image'
 import  { rhythm } from './../utils/typography';
 
@@ -21,8 +19,13 @@ class Blurb extends Component {
         width:'100%',
         zIndex:'2',
         transition:'all 0.35s ease-in-out',
-        background:theme.colors.primary}}>
+        background:theme.colors.primary,
+        display:'grid',
+        gridTemplateRows:'1fr auto'}}>
         
+
+       
+
         <HeaderImage />
 
       
@@ -30,22 +33,27 @@ class Blurb extends Component {
               width:'100%',
               height:'100%',
               display:'flex',
-              '@media(max-height:659px)' : {
-                paddingTop:rhythm(4)
+              '@media(max-height:730px)' : {
+                paddingTop:rhythm(6),
+                alignItems:'flex-start'
               },
-              '@media(min-height: 660px)' : {
+              '@media(min-height: 731px)' : {
                 alignItems: 'center',
               },
               
               overflowY:'scroll',
             justifyContent: 'center',
-            padding:rhythm(2),
+            padding:rhythm(1),
             color:'white',
             position:'relative',
             zIndex:'2'}}>
 
           <div css={{
-              margin: '0 5vw'
+              '@media(min-width:1000px)' : {
+                margin: '0 5vw',
+                // padding:rhythm(1)
+              }
+             
             }}>
             <h2 css={{marginBottom:rhythm(0.5)}}>About me</h2>
             <p css={{maxWidth:'600px', marginBottom:rhythm(3)}}>I'm a UX Engineer<sup>*</sup> with skills that transcend the entire UX spectrum - from research and creation,through to implementation.
@@ -58,7 +66,7 @@ class Blurb extends Component {
           </div>
         
       
-        <small css={{fontSize:'11px',color:'white',position:'absolute', bottom:'10px', right:'12px'}}><sup>*</sup> Also known as UX Unicorns</small>
+        <small css={{display:'block',textAlign:'right',gridRowStart:'2',fontSize:'12px',color:'white',padding:'12px'}}><sup>*</sup> Also known as UX Unicorns</small>
     </section>
 
   

@@ -1,10 +1,7 @@
 import { Link } from "gatsby"
-import PropTypes from "prop-types"
 import React, { Component } from "react"
-import { useStaticQuery, graphql } from "gatsby"
 import theme from './../utils/variables'
 import  { rhythm } from './../utils/typography';
-import { ScrollbarContext } from "react-scrollbars-custom";
 
 
 
@@ -24,9 +21,9 @@ class Header extends Component {
       let isClicked = this.props.isAboutClicked;
 
     if(isClicked) {
-      document.body.classList.add('hidden');
+      document.documentElement.classList.add('hidden');
     } else {
-      document.body.classList.remove('hidden');
+      document.documentElement.classList.remove('hidden');
     }
 
       return (
@@ -34,7 +31,7 @@ class Header extends Component {
 
   <header css={{
       marginBottom:rhythm(2),
-      background:'rgba(255,255,255,0.75)',
+      //background:'rgba(255,255,255,0.75)',
       display:'flex',
       padding:rhythm(1),
       justifyContent:'space-between',
@@ -58,18 +55,21 @@ class Header extends Component {
           bottom:'0',
           background:'white',
           content:`''`,
-          zIndex:'-1'
+          zIndex:'-1',
+          transition: 'all 0.25s',
+        boxShadow: isClicked ? '0px 0px 0px 8px rgba(255,255,255,0)' : '0px 0px 0px 8px rgba(255,255,255,0.5)',
         },
         '@media(max-width:899px)' : {
           fontSize:rhythm(1)
         }
       }}>
 
-        <span css={{
+        <Link to="/" css={{
           display: `inline-block`,
           color: theme.colors.primary,
           position:'relative',
-        }}>Iain Durie</span>
+          textDecoration:'none'
+        }}>Iain Durie</Link>
       </h1>
 
       <span onClick={this.switchBlurb} aria-role="button" css={{
@@ -92,6 +92,19 @@ class Header extends Component {
         transform: isClicked ? 'scaleX(1)' : 'scaleX(0)',
         transformOrigin: 'right center',
         transition:'all 0.35s'
+      },
+      '&::before' : {
+        position:'absolute',
+        left:'-5px',
+        width: '100%',
+        top:'0',
+        bottom:'0',
+        background:'white',
+        transition: 'all 0.25s',
+        boxShadow: isClicked ? '0px 0px 0px 8px rgba(255,255,255,0)' : '0px 0px 0px 8px rgba(255,255,255,0.5)',
+        content:`''`,
+        zIndex:'-2',
+        
       }
       }}>
       {!isClicked && 

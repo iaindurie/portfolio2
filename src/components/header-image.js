@@ -7,7 +7,7 @@ const HeaderImage = ({ data }) => (
     <Image css={{opacity:'0.15',
     position:'absolute !important',
     top:'0', left:'0', zIndex:'1',
-width:'100%', height:'100%'}} fluid={data.headerImgQuery.childImageSharp.fluid} alt="My workspace" />
+width:'100%', height:'100vh'}} fluid={data.headerImgQuery.childImageSharp.fluid} alt="My workspace" />
 )
 
 export default props => (

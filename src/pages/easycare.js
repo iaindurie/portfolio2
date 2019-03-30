@@ -37,7 +37,7 @@ export default ({data,
         {/* <BackLink /> */}
 
         <article css={{
-          padding:rhythm(5) + ' ' + rhythm(1.25),
+          padding:rhythm(5) + ' ' + rhythm(1),
           '@media(min-width:1050px)' : {
             display:'grid',
             gridTemplateColumns:'minmax(25%, 350px) 1fr',
