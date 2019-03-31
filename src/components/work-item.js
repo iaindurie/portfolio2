@@ -1,5 +1,4 @@
 import { Link } from "gatsby"
-import PropTypes from "prop-types"
 import React from "react"
 import Image from "gatsby-image"
 import theme from './../utils/variables'
@@ -37,14 +36,13 @@ const WorkItem = (props) => (
           },
         },
         '@media(min-width:1050px)' : {
-          maxWidth: 'none',
           paddingLeft:rhythm(2),
           paddingRight:rhythm(2),
           maxWidth:props.mainPic.childImageSharp.fluid.presentationWidth,
           flex:'1',
           height:'100%',
           '> .gatsby-image-wrapper':{
-            height:'100%'
+            height: props.orientation === 'portrait' ? '100%' : 'auto'
           },
           '& img' : {
             objectFit: 'contain !important'
@@ -53,7 +51,7 @@ const WorkItem = (props) => (
         
       }}>
         {props.mainPic &&
-          <Image fluid={props.mainPic.childImageSharp.fluid} alt={props.alt} />
+          <Image critical={props.critical ? 'true' : 'false'} fluid={props.mainPic.childImageSharp.fluid} alt={props.alt} />
         }
       </div>
 

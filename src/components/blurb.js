@@ -2,7 +2,7 @@ import React, { Component } from "react"
 import theme from './../utils/variables'
 import Skills from './skills'
 import HeaderImage from './header-image'
-import { Scrollbars } from 'react-custom-scrollbars';
+//import { Scrollbars } from 'react-custom-scrollbars';
 import  { rhythm } from './../utils/typography';
 
 class Blurb extends Component {

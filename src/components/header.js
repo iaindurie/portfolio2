@@ -74,7 +74,7 @@ class Header extends Component {
         }}>Iain Durie</Link>
       </h1>
 
-      <span onClick={this.switchBlurb} aria-role="button" css={{
+      <span onClick={this.switchBlurb} role="button" css={{
         cursor:'pointer',
         display:'inline-block',
         color: theme.colors.primary,

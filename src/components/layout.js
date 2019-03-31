@@ -25,6 +25,12 @@ class Layout extends Component {
   componentDidMount() {
     // 3. Get a target element that you want to persist scrolling for (such as a modal/lightbox/flyout/nav). 
     this.targetElement = this.targetRef.current; 
+
+    if(this.state.blurbShown) {
+      disableBodyScroll(this.targetElement);
+    } else {
+      enableBodyScroll(this.targetElement);
+    }
   }
 
   
@@ -45,13 +51,6 @@ class Layout extends Component {
     
   }
 
-  componentDidMount() {
-    if(this.state.blurbShown) {
-      disableBodyScroll(this.targetElement);
-    } else {
-      enableBodyScroll(this.targetElement);
-    }
-  }
     
   render() {
     return (

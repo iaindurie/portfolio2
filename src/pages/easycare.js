@@ -5,7 +5,6 @@ import WorkTitle from "../components/work-title"
 import List from '../components/list'
 import WorkDetail from '../components/work-detail'
 import WorkIntro from '../components/work-intro'
-import BackLink from '../components/back-link'
 import WorkImages from '../components/work-images'
 import SEO from '../components/seo'
 import { rhythm } from "../utils/typography";

@@ -1,8 +1,6 @@
 import React, { Component } from "react"
 import Image from "gatsby-image"
-import { Link } from "gatsby"
 import  { rhythm } from './../utils/typography'
-//import 'intersection-observer'
 import { InView } from 'react-intersection-observer'
 import styles from './work-images.module.css'
 import { css } from 'glamor'
@@ -22,17 +20,12 @@ let titleOut = css({
 
 
 class WorkImages extends Component {
-    constructor(props) {
-        super(props);
-    
-      }
-
-      
+  
       render() {
           
         const images = this.props.images;
         const height = this.props.height;
-        const maxWidth = this.props.maxWidth;
+        //const maxWidth = this.props.maxWidth;
      
         return (
           <div className={styles.work} css={{

@@ -1,6 +1,4 @@
 import React, { Component } from "react"
-import theme from './../utils/variables'
-import  { rhythm } from './../utils/typography';
 
 class Main extends Component {
     

@@ -1,6 +1,4 @@
 import React from "react"
-import Helmet from "react-helmet"
-import theme from './../utils/variables'
 import  { rhythm } from './../utils/typography'
 import styles from './skills.module.css'
 
