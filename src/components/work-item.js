@@ -29,7 +29,7 @@ const WorkItem = (props) => (
          maxWidth: props.mobileMaxWidth ? props.mobileMaxWidth : 'none',
          '@media(max-width:1300px)' : {
           order:'2',
-          flex:'100vh',
+          flex: props.orientation === 'portrait' ? '100vh' : 'auto',
           width:'100%',
           '> .gatsby-image-wrapper':{
             height:'100%'
