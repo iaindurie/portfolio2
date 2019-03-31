@@ -24,22 +24,27 @@ class WorkImages extends Component {
       render() {
           
         const images = this.props.images;
-        const height = this.props.height;
-        //const maxWidth = this.props.maxWidth;
+        //const height = this.props.height;
+        const maxWidth = this.props.maxWidth;
      
         return (
           <div className={styles.work} css={{
-            '@media(min-width:1049px)' : {
-              marginTop:'-90px'
+            '@media(min-width:1300px)' : {
+              marginTop:'-90px',
+              padding:'0',
+              marginLeft:'initial',
+              marginRight:'initial'
             },
-            maxWidth:'1200px',
+            maxWidth: maxWidth,
+            margin: '0 auto',
             gridColumnStart:'2',
-            gridRowStart:'1'
+            gridRowStart:'1',
+            padding:'2vw'
           }}>
         
             {images.map(i => (
               <figure key={i.id} css={{
-                '@media(min-width:1050px)' : {
+                '@media(min-width:1300px)' : {
                   
                 },
                 minHeight:'95vh',
@@ -97,7 +102,7 @@ class WorkImages extends Component {
                     )}
                 </InView>
        
-    {height === 'full' ?
+    {i.orientation === 'portrait' ?
     <div css={{
         display:'block',
         // cursor:'zoom-in',
@@ -108,7 +113,7 @@ class WorkImages extends Component {
             '& img' : {
               objectFit: 'contain !important'
             },
-        '@media(min-width:1050px)' : {
+        '@media(min-width:1300px)' : {
             paddingLeft:rhythm(2),
             paddingRight:rhythm(2),
             //maxWidth:this.props.mainPic.childImageSharp.fluid.presentationWidth,
@@ -124,6 +129,10 @@ class WorkImages extends Component {
         <Image fluid={i.img.childImageSharp.fluid} alt={i.alt} />
     </div>
     }
+
+
+
+
                    
              
               </figure>

@@ -12,11 +12,12 @@ const WorkItem = (props) => (
       flexDirection:'column',
       marginBottom:rhythm(3),
       alignItems:'center',
-      '@media(min-width: 1050px)' : {
+      '@media(min-width: 1099px)' : {
         justifyContent:'center',
         marginBottom:rhythm(2),
         flexDirection:'row',
         height:'95vh',
+        height: props.orientation === 'portrait' ? '95vh' : '80vh',
         maxHeight:'none'
       },
       '@media(min-width: 1300px)' : {
@@ -26,8 +27,7 @@ const WorkItem = (props) => (
 
       <div css={{
          maxWidth: props.mobileMaxWidth ? props.mobileMaxWidth : 'none',
-
-         '@media(max-width:1049px)' : {
+         '@media(max-width:1300px)' : {
           order:'2',
           flex:'100vh',
           width:'100%',
@@ -35,14 +35,14 @@ const WorkItem = (props) => (
             height:'100%'
           },
         },
-        '@media(min-width:1050px)' : {
+        '@media(min-width:1300px)' : {
           paddingLeft:rhythm(2),
           paddingRight:rhythm(2),
           maxWidth:props.mainPic.childImageSharp.fluid.presentationWidth,
           flex:'1',
           height:'100%',
           '> .gatsby-image-wrapper':{
-            height: props.orientation === 'portrait' ? '100%' : 'auto'
+            height: '100%'
           },
           '& img' : {
             objectFit: 'contain !important'
@@ -57,7 +57,7 @@ const WorkItem = (props) => (
 
       <Link to={props.page} css={{
           textDecoration:'none',
-          '@media(max-width:1049px)' : {
+          '@media(max-width:1300px)' : {
             order:'1',
             marginBottom:rhythm(1),
             alignSelf:'flex-start'
@@ -85,12 +85,12 @@ const WorkItem = (props) => (
           display:'inline-block',
           color: theme.colors.primary,
           padding:rhythm(0.2) + ' ' + rhythm(0.5),
-          fontSize:rhythm(1.1),
+          fontSize:rhythm(0.9),
           marginBottom:'0'
         }}>{props.title}</h1>
 
         <h2 css={{
-          fontSize:rhythm(0.85),
+          fontSize:rhythm(0.65),
           paddingLeft:rhythm(0.5),
           marginBottom: rhythm(0.2),
           paddingBottom:'5px',

@@ -6,6 +6,7 @@ import WorkDetail from '../components/work-detail'
 import WorkIntro from '../components/work-intro'
 import WorkImages from '../components/work-images'
 import SEO from '../components/seo'
+import theme from './../utils/variables'
 import { rhythm } from "../utils/typography";
 
 export default ({data, 
@@ -14,25 +15,29 @@ export default ({data,
               id: 'a',
               headline: "Viewing a driver's schedule",
               img: data.ringtons1,
-              alt: ''
+              alt: '',
+              orientation: 'portrait'
             },
             {
               id: 'b',
               headline: "Viewing a customer's basket",
               img: data.ringtons2,
-              alt: ''
+              alt: '',
+              orientation: 'portrait'
             },
             {
                 id: 'c',
                 headline: "Viewing a customer's profile",
                 img: data.ringtons3,
-                alt: ''
-              },
+                alt: '',
+                orientation: 'portrait'
+            },
             {
               id: 'd',
               headline: "Viewing a customer's history",
               img: data.ringtons4,
-              alt: ''
+              alt: '',
+              orientation: 'portrait'
             },
         ]}) => (
     <Layout>
@@ -40,7 +45,7 @@ export default ({data,
        {/* <BackLink /> */}
        <article css={{
           padding:rhythm(5) + ' ' + rhythm(1),
-          '@media(min-width:1050px)' : {
+          '@media(min-width:1300px)' : {
             display:'grid',
             gridTemplateColumns:'minmax(25%, 350px) 1fr',
             gridGap: rhythm(2)
@@ -64,7 +69,7 @@ export default ({data,
                 </WorkDetail>
             </WorkIntro>
 
-           <WorkImages images={images} height="full" />
+           <WorkImages images={images} maxWidth={data.ringtons1.childImageSharp.fluid.presentationWidth} />
 
         </article>
     </Layout>

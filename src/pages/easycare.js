@@ -7,6 +7,7 @@ import WorkDetail from '../components/work-detail'
 import WorkIntro from '../components/work-intro'
 import WorkImages from '../components/work-images'
 import SEO from '../components/seo'
+import theme from './../utils/variables'
 import { rhythm } from "../utils/typography";
 
 
@@ -16,19 +17,22 @@ export default ({data,
               id: 'a',
               headline: 'Answering a question',
               img: data.easy1,
-              alt: ''
+              alt: '',
+              orientation: 'landscape'
             },
             {
               id: 'b',
               headline: 'Showing questionnaire progress',
               img: data.easy2,
-              alt: ''
+              alt: '',
+              orientation: 'landscape'
             },
             {
                 id: 'c',
                 headline: 'User dashboard',
                 img: data.easy3,
-                alt: ''
+                alt: '',
+                orientation: 'landscape'
               }
         ]}) => (
     <Layout>
@@ -37,7 +41,7 @@ export default ({data,
 
         <article css={{
           padding:rhythm(5) + ' ' + rhythm(1),
-          '@media(min-width:1050px)' : {
+          '@media(min-width:1300px)' : {
             display:'grid',
             gridTemplateColumns:'minmax(25%, 350px) 1fr',
             gridGap: rhythm(2)
@@ -62,7 +66,7 @@ export default ({data,
                 </WorkDetail>
             </WorkIntro>
 
-            <WorkImages images={images} />
+            <WorkImages images={images} maxWidth={data.easy1.childImageSharp.fluid.presentationWidth} />
         </article>
     </Layout>
   )

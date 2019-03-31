@@ -6,6 +6,7 @@ import WorkDetail from '../components/work-detail'
 import WorkIntro from '../components/work-intro'
 import WorkImages from '../components/work-images'
 import SEO from '../components/seo'
+import theme from './../utils/variables'
 import { rhythm } from "../utils/typography";
 
 export default ({data, 
@@ -14,31 +15,36 @@ export default ({data,
             id: 'a',
             headline: "Finding a user's company",
             img: data.bloom1,
-            alt: ''
+            alt: '',
+            orientation: 'landscape'
           },
           {
             id: 'b',
             headline: 'Confirming company details',
             img: data.bloom2,
-            alt: ''
+            alt: '',
+            orientation: 'landscape'
           },
           {
               id: 'c',
               headline: "Editing company details",
               img: data.bloom3,
-              alt: ''
+              alt: '',
+              orientation: 'landscape'
             },
           {
             id: 'd',
             headline: "Entering sign-up details",
             img: data.bloom4,
-            alt: ''
+            alt: '',
+            orientation: 'landscape'
           },
           {
             id: 'e',
             headline: "Awaiting user confirmation",
             img: data.bloom5,
-            alt: ''
+            alt: '',
+            orientation: 'landscape'
           },
       ]}) => (
     <Layout>
@@ -46,7 +52,7 @@ export default ({data,
         {/* <BackLink /> */}
         <article css={{
           padding:rhythm(5) + ' ' + rhythm(1),
-          '@media(min-width:1050px)' : {
+          '@media(min-width:1300px)' : {
             display:'grid',
             gridTemplateColumns:'minmax(25%, 350px) 1fr',
             gridGap: rhythm(2)
@@ -70,7 +76,7 @@ export default ({data,
             </WorkDetail>
             </WorkIntro>
 
-            <WorkImages images={images} />
+            <WorkImages images={images} maxWidth={data.bloom1.childImageSharp.fluid.presentationWidth} />
         </article>
     </Layout>
 

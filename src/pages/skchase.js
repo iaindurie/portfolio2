@@ -6,7 +6,12 @@ import WorkDetail from '../components/work-detail'
 import WorkIntro from '../components/work-intro'
 import WorkImages from '../components/work-images'
 import SEO from '../components/seo'
+import theme from './../utils/variables'
 import { rhythm } from "../utils/typography";
+
+//let bp = `'@media(min-width:'` + theme.breakpoint.work + `)'`;
+
+//console.log(bp);
 
 export default ({data, 
     images = [
@@ -14,39 +19,45 @@ export default ({data,
               id: 'a',
               headline: "Landing page design in a light theme",
               img: data.sk1,
-              alt: ''
+              alt: '',
+              orientation:'landscape-large'
             },
             {
               id: 'b',
               headline: 'Dark variation of landing page',
               img: data.sk2,
-              alt: ''
+              alt: '',
+              orientation:'landscape'
             },
             {
                 id: 'c',
                 headline: "Viewing voucher listings",
                 img: data.sk3,
-                alt: ''
+                alt: '',
+                orientation:'landscape'
               },
             {
               id: 'd',
               headline: "Viewing a single voucher",
               img: data.sk4,
-              alt: ''
+              alt: '',
+              orientation:'landscape'
             },
             {
               id: 'e',
               headline: "Viewing the basket",
               img: data.sk5,
-              alt: ''
+              alt: '',
+              orientation:'landscape'
             },
         ]}) => (
+       
     <Layout>
       <SEO title="Iain Durie - SK Chase" />
-         {/* <BackLink /> */}
+
          <article css={{
           padding:rhythm(5) + ' ' + rhythm(1),
-          '@media(min-width:1050px)' : {
+          '@media(min-width:1300px)' : {
             display:'grid',
             gridTemplateColumns:'minmax(25%, 350px) 1fr',
             gridGap: rhythm(2)
@@ -69,7 +80,7 @@ export default ({data,
                 </WorkDetail>
             </WorkIntro>
             
-            <WorkImages images={images} />
+            <WorkImages images={images} maxWidth={data.sk1.childImageSharp.fluid.presentationWidth} />
         </article>
     </Layout>
   )

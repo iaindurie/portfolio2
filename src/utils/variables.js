@@ -12,10 +12,7 @@ const theme = {
     maxWidth: '1800px',
     maxWidthText: '1000px',
     breakpoint: {
-      xs: '400px',
-      s: '600px',
-      m: '900px',
-      l: '1200px',
+      work: '1300px',
     },
   };
   
