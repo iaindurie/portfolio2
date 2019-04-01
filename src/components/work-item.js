@@ -12,7 +12,7 @@ const WorkItem = (props) => (
       flexDirection:'column',
       marginBottom:rhythm(3),
       alignItems:'center',
-      '@media(min-width: 1099px)' : {
+      '@media(min-width: 1299px)' : {
         justifyContent:'center',
         marginBottom:rhythm(2),
         flexDirection:'row',
@@ -26,8 +26,8 @@ const WorkItem = (props) => (
     }}>
 
       <div css={{
-         maxWidth: props.mobileMaxWidth ? props.mobileMaxWidth : 'none',
-         '@media(max-width:1300px)' : {
+         maxWidth: props.orientation === "portrait" ? '500px' : '900px',
+         '@media(max-width:1299px)' : {
           order:'2',
           flex: props.orientation === 'portrait' ? '100vh' : 'auto',
           width:'100%',
@@ -57,7 +57,7 @@ const WorkItem = (props) => (
 
       <Link to={props.page} css={{
           textDecoration:'none',
-          '@media(max-width:1300px)' : {
+          '@media(max-width:1299px)' : {
             order:'1',
             marginBottom:rhythm(1),
             alignSelf:'flex-start'
