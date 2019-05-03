@@ -48,7 +48,6 @@ const WorkItem = (props) => (
             objectFit: 'contain !important'
           }
         },
-        
       }}>
         {props.mainPic &&
           <Image critical={props.critical ? 'true' : 'false'} fluid={props.mainPic.childImageSharp.fluid} alt={props.alt} />

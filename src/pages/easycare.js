@@ -33,6 +33,13 @@ export default ({data,
                 img: data.easy3,
                 alt: '',
                 orientation: 'landscape'
+              },
+              {
+                id: 'd',
+                headline: 'Transitioning to another section',
+                img: data.easy4,
+                alt: '',
+                orientation: 'landscape'
               }
         ]}) => (
     <Layout>
@@ -94,6 +101,16 @@ export default ({data,
       }
     }
     easy3:  file(relativePath: { regex: "/easycare-assessments/" }) {
+      absolutePath
+      childImageSharp {
+        fluid(maxWidth:1200, quality: 100) {
+          ...GatsbyImageSharpFluid_withWebp
+          presentationWidth
+          aspectRatio
+        }
+      }
+    }
+    easy4:  file(relativePath: { regex: "/easy-transition/" }) {
       absolutePath
       childImageSharp {
         fluid(maxWidth:1200, quality: 100) {

@@ -45,7 +45,8 @@ class Work extends React.Component {
           page="easycare"
           mainPic={data.mainEasyCare}
           alt="respond app screenshot"
-          orientation="landscape" />
+          orientation="landscape"
+          mobileMaxWidth="1000px" />
 
         <WorkItem
           title="Ringtons"
